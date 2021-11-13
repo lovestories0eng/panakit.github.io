@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-11-13T13:40:49.472Z</updated>
+  <updated>2021-11-13T15:02:58.481Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker部署Python-Flask后端</title>
+    <link href="https://pshtrophycloud.com/2.html"/>
+    <id>https://pshtrophycloud.com/2.html</id>
+    <published>2021-11-13T13:57:41.000Z</published>
+    <updated>2021-11-13T15:02:58.481Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;docker环境部署入门&quot;&gt;&lt;a href=&quot;#docker环境部署入门&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="https://pshtrophycloud.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://pshtrophycloud.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Github + Hexo 搭建个人博客超详细教程</title>
