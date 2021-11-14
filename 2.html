@@ -1059,29 +1059,31 @@ if __name__ == &#39;__main__&#39;:
     </div>
 
     
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
 
-    
-    <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
-<link rel="stylesheet" href="/css/gitment.css">
-
-<div class="gitment-card card" data-aos="fade-up">
-    <div id="gitment-content" class="card-content"></div>
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="/libs/gitment/gitment.js"></script>
+<script src="/libs/gitalk/gitalk.min.js"></script>
 <script>
-var gitment = new Gitment({
-    id: 'Sat Nov 13 2021 21:57:41 GMT+0800',
-    owner: 'lovestories0eng',
-    repo: 'panakittalk',
-    oauth: {
-        client_id: '680cb61207d8931af89d',
-        client_secret: '83cdf9907c8ba2b5115a057ce911c1d01cd37941'
-    }
-});
+    let gitalk = new Gitalk({
+        clientID: '680cb61207d8931af89d',
+        clientSecret: '83cdf9907c8ba2b5115a057ce911c1d01cd37941',
+        accessToken: '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',
+        repo: 'panakittalk',
+        owner: 'lovestories0eng',
+        admin: '"lovestories0eng"',
+        id: '2.html',
+        distractionFreeMode: false, // Facebook-like distraction free mode,
+        proxy: "https://github-proxy.toimc.workers.dev/https://github.com/login/oauth/access_token"
+    });
 
-gitment.render('gitment-content');
+    gitalk.render('gitalk-container');
 </script>
+    
+
     
 
     
