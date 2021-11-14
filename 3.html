@@ -9,10 +9,11 @@
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
     <meta name="description" content="引言Java二分查找的实现和递归实现快速排序。
-二分查找import java.util.Scanner;
-
-public class binarySearch {
-    public static void main(String[] ">
+二分查找题目描述：
+输入整数n(n&amp;gt;0&amp;amp;&amp;amp;n&amp;lt;=100)，表示数组的长度
+ 输入n个正整数（递增），作为数组元素
+ 输入1个正整数，作为要查找的元素
+ 输出：利用二">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -778,7 +779,7 @@ public class binarySearch {
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    70
+                    277
                 </div>
                 
 
@@ -802,7 +803,13 @@ public class binarySearch {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>Java二分查找的实现和递归实现快速排序。</p>
-<h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><pre class="line-numbers language-Java"><code class="language-Java">import java.util.Scanner;
+<h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><p><strong>题目描述：</strong></p>
+<p>输入整数n(n&gt;0&amp;&amp;n&lt;=100)，表示数组的长度</p>
+<p> 输入n个正整数（递增），作为数组元素</p>
+<p> 输入1个正整数，作为要查找的元素</p>
+<p> 输出：利用二分查找输出要查找的元素在数组中的下标位置，若没有这个数则输出no </p>
+<p>二分查找： 又叫折半查找，要求待查找的序列有序。每次取中间位置的值与待查关键字比较，如果中间位置的值比待查关键字大，则在前半部分循环这个查找的过程，如果中间位置的值比待查关键字小，则在后半部分循环这个查找的过程。直到查找到了为止，否则序列中没有待查的关键字。</p>
+<pre class="line-numbers language-Java"><code class="language-Java">import java.util.Scanner;
 
 public class binarySearch {
     public static void main(String[] args) {
@@ -844,7 +851,21 @@ public class binarySearch {
     }
 }
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><pre class="line-numbers language-Java"><code class="language-Java">import java.util.Scanner;
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p><strong>题目描述</strong></p>
+<p>快速排序是常用排序算法，请参考以下资料实现对一组数组的升序快速排序 </p>
+<p>思路： </p>
+<ol>
+<li><p>数组中选择一个数作为基准点（可以选第一个元素，也可以任意选择） </p>
+</li>
+<li><p>将所有大于基准点的放在基准点右侧，所有小于基准点的放在其左侧 </p>
+</li>
+<li><p>针对基准点左侧和右侧的区间，重复步骤1和2，直到各区间只有一个数 </p>
+<p>参考网址：<a href="http://tools.jb51.net/aideddesign/paixu_ys" target="_blank" rel="noopener">http://tools.jb51.net/aideddesign/paixu_ys</a></p>
+</li>
+</ol>
+<pre class="line-numbers language-Java"><code class="language-Java">package cn.itcast.train.demo2;
+
+import java.util.Scanner;
 
 public class quickSort {
     public static void main(String[] args) {
@@ -889,7 +910,7 @@ public class quickSort {
         array[r] = temp;
         return i + 1;
     }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1370,10 +1391,11 @@ public class quickSort {
                     <div class="summary block-with-text">
                         
                             引言Java二分查找的实现和递归实现快速排序。
-二分查找import java.util.Scanner;
-
-public class binarySearch {
-    public static void main(String[] 
+二分查找题目描述：
+输入整数n(n&gt;0&amp;&amp;n&lt;=100)，表示数组的长度
+ 输入n个正整数（递增），作为数组元素
+ 输入1个正整数，作为要查找的元素
+ 输出：利用二
                         
                     </div>
                     <div class="publish-info">
@@ -1627,7 +1649,7 @@ Dockerfile文件# Docker image for
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.8k
+            <span class="white-color">7k
              丨            
           
 
@@ -1717,7 +1739,7 @@ Dockerfile文件# Docker image for
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">6.8k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">7k</span>
     </div>
 </footer>
 
