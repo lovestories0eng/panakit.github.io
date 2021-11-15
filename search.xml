@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Java类实现卡牌操作</title>
+      <link href="/4.html"/>
+      <url>/4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="完成一个“卡牌操作”的类"><a href="#完成一个“卡牌操作”的类" class="headerlink" title="完成一个“卡牌操作”的类"></a>完成一个“卡牌操作”的类</h1><p>题目要求：</p><p>1.以面向对象方式写一个“卡牌操作”类：CardOperator</p><p>2.具有以下功能（类似扑克的功能）：</p><ul><li><p>功能1：初始化卡牌，initialCards（）</p></li><li><p>功能2：显示卡牌，showCards（）</p></li><li><p>功能3：洗牌（将牌打乱），shuffleCards（）</p></li><li><p>功能4：理牌（重新排序），rankCards（）</p></li></ul><p>3.写一个主控程序：MainProcess类（包含main函数）</p><ul><li><p>调用CardOperator完成各种卡牌操作</p></li><li><p>MainProcess类如下图（直接copy即可）</p></li></ul><p><img src="4/MainProcess.png" alt></p><ul><li>输出结果如下图所示</li></ul><p><img src="4/1.png" alt></p><p><img src="4/2.png" alt></p><p><img src="4/3.png" alt></p><h3 id="CardOperator-java"><a href="#CardOperator-java" class="headerlink" title="CardOperator.java"></a>CardOperator.java</h3><pre><code>package cn.itcast.train.demo2;public class CardOperater {    private static int numPerCards = 52;    //  private int cards_num;    //  private int[][] cards;    public int[][] CardOperater(int userInputCardsNum) {        int[][] cards = new int[userInputCardsNum][numPerCards];        for (int i = 0; i &lt; userInputCardsNum; i++) {            cards[i] = initialCards();        }        return cards;    }    public static int[] initialCards() {        int[] cardArray = new int[52];        for (int i = 0; i &lt; cardArray.length; i++) {            cardArray[i] = i;        }        return cardArray;    }    public static void showCards(int[][] cardArrays) {        int cardTypeNumber;        int cardValueNumber;        int count = 0;        String cardString;        for (int i = 0; i &lt; cardArrays.length; i++) {            System.out.printf(&quot;第%d副卡牌\n&quot;, i + 1);            for (int j = 0; j &lt; numPerCards; j++) {                cardTypeNumber = cardArrays[i][j] / 13;                cardValueNumber = cardArrays[i][j] % 13;                cardString = judge(cardTypeNumber, cardValueNumber);                if (count % 13 == 12)                    System.out.println(cardString);                else {                    System.out.printf(&quot;%s &quot;, cardString);                }                count++;            }            System.out.println();        }    }    private static String judge(int cardTypeNumber, int cardValueNumber) {        String cardType = &quot;&quot;;        String cardValue = &quot;&quot;;        switch (cardTypeNumber) {            case 0 -&gt; {                cardType = &quot;黑桃&quot;;            }            case 1 -&gt; {                cardType = &quot;红桃&quot;;            }            case 2 -&gt; {                cardType = &quot;方片&quot;;            }            case 3 -&gt; {                cardType = &quot;梅花&quot;;            }            default -&gt; {                System.out.println(&quot;初始化错误&quot;);                System.exit(2);            }        }        switch (cardValueNumber) {            case 0 -&gt; {                cardValue = &quot;A&quot;;            }            case 10 -&gt; {                cardValue = &quot;Jack&quot;;            }            case 11 -&gt; {                cardValue = &quot;Queen&quot;;            }            case 12 -&gt; {                cardValue = &quot;King&quot;;            }            default -&gt; {                cardValue = String.valueOf(cardValueNumber + 1);            }        }        return cardType + cardValue;    }    public int[][] shuffleCards(int[][] cardArray) {        for (int i = 0; i &lt; cardArray.length; i++) {            for (int j = 0;j &lt; numPerCards; j++) {                int index = (int) (Math.random() * (numPerCards));                int tmp = cardArray[i][j];                cardArray[i][j] = cardArray[i][index];                cardArray[i][index] = tmp;            }        }        return cardArray;    }    public static int[][] rankCards(int[][] cardArray) {        for (int[] ints : cardArray) {            qSort(ints, 0, ints.length - 1);        }        return cardArray;    }    public static void qSort(int[] array, int p, int r) {        int q;        if (p &lt; r) {            q = partition(array, p, r);            qSort(array, p, q - 1);            qSort(array, q + 1, r);        }    }    public static int partition(int[] array, int p, int r) {        int x = array[r];        int i = p - 1; // 指向的是比主元素小的位置        int temp;        for (int j=p;j&lt;=r-1;j++) {            if (array[j] &lt;= x) {                i++;                temp = array[i];                array[i] = array[j];                array[j] = temp;            }        }        temp = array[i+1];        array[i+1] = array[r];        array[r] = temp;        return i + 1;    }}</code></pre><h3 id="MainProcess-java"><a href="#MainProcess-java" class="headerlink" title="MainProcess.java"></a>MainProcess.java</h3><pre><code>package cn.itcast.train.demo2;public class MainProcess {    public static void main(String[] args) {        int[][] cards;        int[][] shuffledCards;        int[][] rankedCards;        CardOperater co = new CardOperater();        int userInputCardsNum = 3;        cards = co.CardOperater(userInputCardsNum);        System.out.printf(&quot;初始化%d副卡牌\n&quot;, userInputCardsNum);        CardOperater.showCards(cards);        System.out.println(&quot;打乱卡牌&quot;);        shuffledCards = co.shuffleCards(cards);        CardOperater.showCards(shuffledCards);        System.out.println(&quot;重新洗牌&quot;);        rankedCards = CardOperater.rankCards(shuffledCards);        CardOperater.showCards(rankedCards);    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快速排序和二分查找</title>
       <link href="/3.html"/>
       <url>/3.html</url>
