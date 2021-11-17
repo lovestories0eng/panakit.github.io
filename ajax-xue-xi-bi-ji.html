@@ -4,20 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="VMware 安装 CentOS 8.1 完整教程 , 被动学习">
+    <meta name="keywords" content="Ajax学习笔记, 被动学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="我使用的VMware版本：VMware 15 Pro
-镜像：CentOS 8.1
-电脑配置需求：
-
-2 GB 及以上的RAM（官方推荐至少4G）
-2 GHz 或以上的 CPU
-64 位 x86 架构
-20 GB 及以上硬盘空间
-
-关于Cen">
+    <meta name="description" content="Node环境部署安装express后端框架npm install expressnpm WARN saveError ENOENT: no such file or directory, open &amp;#39;D:\Users\HP\Desk">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VMware 安装 CentOS 8.1 完整教程  | Peter Pan的后花园</title>
+    <title>Ajax学习笔记 | Peter Pan的后花园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -626,13 +617,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        VMware 安装 CentOS 8.1 完整教程 
+                        Ajax学习笔记
                     </div>
                 </div>
             </div>
@@ -743,12 +734,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/VMware/" target="_blank">
-                            <span class="chip bg-color">VMware</span>
-                        </a>
-                        
-                        <a href="/tags/CentOS/" target="_blank">
-                            <span class="chip bg-color">CentOS</span>
+                        <a href="/tags/Ajax/" target="_blank">
+                            <span class="chip bg-color">Ajax</span>
                         </a>
                         
                     </div>
@@ -759,8 +746,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/Ajax/" class="post-category" target="_blank">
+                            Ajax
                         </a>
                         
                     </div>
@@ -771,7 +758,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-13
+                    2021-11-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -785,14 +772,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    746
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
                 
@@ -808,141 +795,113 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我使用的<font color="red" size="3">VMware</font>版本：<font color="red" size="3">VMware 15 Pro</font></p>
-<p>镜像：<font color="red" size="3">CentOS 8.1</font></p>
-<p><strong>电脑配置需求：</strong></p>
-<ul>
-<li><font color="red" size="3">2 GB</font> 及以上的<font color="red" size="3">RAM</font>（官方推荐至少<font color="red" size="3">4G</font>）</li>
-<li><font color="red" size="3">2 GHz </font>或以上的 <font color="red" size="3">CPU</font></li>
-<li><font color="red" size="3">64 </font>位 <font color="red" size="3">x86</font> 架构</li>
-<li><font color="red" size="3">20 GB </font>及以上硬盘空间</li>
-</ul>
-<p><strong>关于CentOS 8.1</strong></p>
-<ul>
-<li>基于Linux 4.18</li>
-<li>提供 PHP 7.2、Python 3.6、Ansible 2.8、VIM 8.0 和 Squid 4</li>
-<li>使用网络管理器（nmcli 和 nmtui）进行网络配置，移除了网络脚本<br>通过 BaseOS 和应用流(AppStream)仓库发布.</li>
-<li>AppStream 是对传统rpm格式的全新扩展，为一个组件同时提供多个主要版本</li>
-<li>YUM 包管理器基于 DNF 技术，提供模块化内容支持，增强了性能，并且提供了设计良好的API用于与其他工具集成</li>
-<li>RHEL 8提供了版本控制工具: Git 2.18, Mercurial 4.8,和 Subversion 1.10.</li>
-</ul>
-<blockquote>
-<p>内核实时修补；称为 FRR 的新路由协议堆栈（支持多种 IPv4 和 IPv6 路由协议）；伯克利数据包筛选器（eBPF）的扩展版本，可帮助系统管理员解决复杂的网络问题；支持在使用设备时对 LUKS2 中的块设备进行重新加密；此外，还提供了一种用于为容器生成 SELinux 策略的新工具 udica.</p>
-</blockquote>
-<p><font color="red" size="3">CentOS 8</font>系列增加了许多新特性，<font color="red" size="3">CentOS 8.1</font>相当于它的第二个发行版本，我这里就不列出了，具体可以看官方文档：</p>
-<p><a href="https://wiki.centos.org/zh/Manuals/ReleaseNotes/CentOS8.1905#A.2BbpBO43gB-" target="_blank" rel="noopener">CentOS 官网文档手册</a></p>
-<p><a href="https://www.cnblogs.com/RXDXB/p/11660287.html" target="_blank" rel="noopener">Centos8与Centos7区别参照redhat）</a></p>
-<h1 id="一、准备过程"><a href="#一、准备过程" class="headerlink" title="一、准备过程"></a>一、准备过程</h1><p>目前比较流行的两款虚拟机软件 <font color="red" size="3">VMware</font> 、<font color="red" size="3">VirtualBox</font>，<font color="red" size="3">VirtualBox</font>安装<font color="red" size="3">CentOS 8</font>系列目前还有很多<font color="red" size="3">Bug</font>，推荐使用<font color="red" size="3">VMware</font>。</p>
-<p>1.安装<font color="red" size="3">VMware</font></p>
-<p>如果你还没有安装虚拟机，进入<a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" title="VMware" target="_blank" rel="noopener">VMware官网</a>下载相应版本安装即可：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/01.png" alt></p>
-<p>官网下载过程可能有点慢，这里安装过程我就不赘述了。</p>
-<p>2.下载<font color="red" size="3">CentOS 8.1</font>镜像资源</p>
-<p>进入<a href="http://mirrors.huaweicloud.com/centos/8.1.1911/isos/x86_64/CentOS-8.1.1911-x86_64-dvd1.iso" title="CentOS" target="_blank" rel="noopener">CentOS官网</a>下载<font color="red" size="3">CentOS 8.1</font>镜像，我这里给的是在华为云的，下载速度还是可以。</p>
-<h1 id="二、创建虚拟机"><a href="#二、创建虚拟机" class="headerlink" title="二、创建虚拟机"></a>二、创建虚拟机</h1><p>1.打开<font color="red" size="3">VMware</font>，点击创建新的虚拟机：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/02.png" alt></p>
-<p>2.点击自定义（高级）：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/03.png" alt></p>
-<p>3.这一步直接默认就可以：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/04.png" alt></p>
-<p>4.选择稍后安装操作系统：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/05.png" alt></p>
-<p>5.选择<font color="red" size="3">Linux</font>，版本选择<font color="red" size="3">Linux 4 ×64位</font>，因为<font color="red" size="3">CentOS 8</font>系列基于<font color="red" size="3"> Linux</font> 内核<font color="red" size="3"> 4.18</font>：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/06.png" alt></p>
-<p>6.虚拟机名称随便，安装位置看自己电脑配置吧，建议安装在<font color="red" size="3">D</font>盘：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/07.png" alt></p>
-<p>7.处理器数量根据自己电脑来配置，反正不够后面可以更改，要安装图形界面的话可以填大一点，新手就这个配置也可以了：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/08.png" alt></p>
-<p>8.内存大小根据自己电脑适当配置，我的电脑内存<font color="red" size="3">16G</font>，所以我给它分配<font color="red" size="3">4G</font>，要安装图形界面的话可以填大一点：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/09.png" alt></p>
-<p>9.设置虚拟机网络连接模式（<font color="red" size="3">NAT</font>）：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/10.png" alt></p>
-<p><strong>关于网络连接模式说明：</strong></p>
-<ul>
-<li><p>桥接：选择桥接模式的话虚拟机和宿主机在网络上就是平级的关系，相当于连接在同一交换机上。</p>
-</li>
-<li><p>NAT：NAT模式就是虚拟机要联网得先通过宿主机才能和外面进行通信。</p>
-</li>
-<li><p>仅主机：虚拟机与宿主机直接连起来</p>
-</li>
-</ul>
-<p>10.选择<font color="red" size="3">I/O</font>控制器类型，然后下一步：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/11.png" alt></p>
-<p>11.选择磁盘类型：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/12.png" alt></p>
-<p>12.选择创建新虚拟磁盘，然后下一步：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/13.png" alt></p>
-<p>13.根据自己的需要分配磁盘容量，勾选将虚拟磁盘拆分成多个文件（方便以后将虚拟机拷贝到设备），然后下一步：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/14.png" alt></p>
-<p>14.根据自己需要指定磁盘文件存储位置，我放在D盘：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/15.png" alt></p>
-<p>15.到这里虚拟机就创建完成了，可以点击自定义硬件更改配置，点击完成创建成功：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/16.png" alt></p>
-<h1 id="三、安装CentOS-8-1"><a href="#三、安装CentOS-8-1" class="headerlink" title="三、安装CentOS 8.1"></a>三、安装CentOS 8.1</h1><p>1.点击编辑虚拟机设置：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/17.png" alt></p>
-<p>2.选择<font color="red" size="3">CD/DVD</font>，勾选启动时连接，再选择使用ISO映像文件，找到下载好的系统镜像文件添加进去，最后确定：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/18.png" alt></p>
-<p>3.开启此虚拟机：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/19.png" alt></p>
-<p>4.开启虚拟机后会出现以下界面，鼠标点进黑窗口，使用键盘方向键选择第一项，安装<font color="red" size="3">CentOS 8</font>，回车，系统开始自动安装</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/20.png" alt></p>
-<p>5.安装完成后选择语言，根据自己情况选择，然后点击继续：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/21.png" alt></p>
-<p>6.首先打开网络和主机名，给虚拟机连上网络：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/22.png" alt></p>
-<p><strong>如果网络连接不上，多半是<font color="red" size="3">DHCP</font>问题，解决办法：</strong></p>
-<p><a href="https://blog.csdn.net/suoyudong/article/details/83037670" target="_blank" rel="noopener">解决安装centos 过程中以太网连接不上网络，不能自动分配ip的问题</a> (By 索渝东)</p>
-<p>7.点击时间和日期，设置系统时间并更改时区(打开网络时间)：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/23.png" alt></p>
-<p>8.选择安装目的地：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/24.png" alt></p>
-<p>9.选择自定义配置，点击完成：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/25.png" alt></p>
-<p>10.添加磁盘分区</p>
-<p><font color="red" size="3">Linux</font>的分区，并不像<font color="red" size="3">Windows</font>一样，分成<font color="red" size="3">C、D、E</font>等盘，介绍几个重要的分区：</p>
-<ul>
-<li>交换分区（swap）：交换分区和Windows的虚拟内存很像。现在内存也便宜，物理服务器的配置也高，以前的说法是一般为物理内存的2倍，现在一般情况下划分为4~8GB备用即可。我们虚拟机的内存是4GB，我们就划8GB吧。</li>
-<li>启动分区（boot）：200MB足够了。</li>
-<li>根分区（/）：剩余空间都给根分区吧。当然我们也可以单独划出/data分区，专门用来存储存数据，不过这里我们先不这样做，直接全部都给根分区。</li>
-</ul>
-<p>按照下图顺序依次进行设置：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/26.png" alt></p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/27.png" alt></p>
-<p>11.点击完成后会弹出更改摘要页面，点击接受更改：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/28.png" alt></p>
-<p>12.点击开始安装：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/29.png" alt></p>
-<p>13.设置<font color="red" size="3">ROOT</font>密码：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/30.png" alt></p>
-<p>14.点击创建用户，可以把用户设为管理员方便操作，如果密码简单就点击两次完成：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/31.png" alt></p>
-<p>15.安装完成后点击重启电脑：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/32.png" alt></p>
-<p>16.重启完成后点击<font color="red" size="3">LICENS INFORMATION</font>,勾选同意许可，然后点击完成：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/33.png" alt></p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/34.png" alt></p>
-<p>17.点击结束配置：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/35.png" alt></p>
-<p>18.来到登录界面，点击未列出，以<font color="red" size="3">root</font>登录，方便后面配置操作：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/36.png" alt></p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/37.png" alt></p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/38.png" alt></p>
-<p>19.选择语言：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/39.png" alt></p>
-<p>选择键盘布局：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/40.png" alt></p>
-<p>是否打开位置服务：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/41.png" alt></p>
-<p>然后按照需要添加账号，然后就可以进入啦：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/42.png" alt></p>
-<p>20.关闭系统使用帮助后，来到我们的<font color="red" size="3">centos8.1</font>桌面，点击活动可以看到系统软件，第一个是内置浏览器，点击最下面可以看到系统所有软件：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/43.png" alt></p>
-<p>21.点击右上角折叠按钮可以连接网络，打开浏览器就可以访问啦，如果不能联网，在上面已经给出解决办法：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/44.png" alt></p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/45.png" alt></p>
-<p>22.右上角有关机按钮，点击就可以关机：</p>
-<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/VMware-%E5%AE%89%E8%A3%85-CentOS-8-1-%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/46.png" alt></p>
-<p>到这里，我们的<font color="red" size="3">CentOS 8 Linux</font> 就算安装完成了，其他<font color="red" size="3">CentOS 8 </font>系列发行版本安装过程类似，可作参考。</p>
+                <h1 id="Node环境部署"><a href="#Node环境部署" class="headerlink" title="Node环境部署"></a>Node环境部署</h1><h3 id="安装express后端框架"><a href="#安装express后端框架" class="headerlink" title="安装express后端框架"></a>安装express后端框架</h3><pre><code>npm install express</code></pre><pre><code>npm WARN saveError ENOENT: no such file or directory, open &#39;D:\Users\HP\Desktop\tech\前端开发\AjaxLearn\package.json&#39;
+npm WARN enoent ENOENT: no such file or directory, open &#39;D:\Users\HP\Desktop\tech\前端开发\AjaxLearn\package.json&#39;
+npm WARN AjaxLearn No description
+npm WARN AjaxLearn No repository field.
+npm WARN AjaxLearn No README data
+npm WARN AjaxLearn No license field.
+
++ express@4.17.1
+added 50 packages from 37 contributors in 2.194s</code></pre><h3 id="安装nodemon包"><a href="#安装nodemon包" class="headerlink" title="安装nodemon包"></a>安装nodemon包</h3><pre><code>npm install -g nodemon</code></pre><pre><code>D:\nodejs\nodemon -&gt; D:\nodejs\node_modules\nodemon\bin\nodemon.js
+
+&gt; nodemon@2.0.15 postinstall D:\nodejs\node_modules\nodemon
+&gt; node bin/postinstall || exit 0
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules\nodemon\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;})
+
++ nodemon@2.0.15
+added 116 packages from 53 contributors in 4.331s
+(base) PS D:\Users\HP\Desktop\tech\前端开发\AjaxLearn&gt; nodemon
+  Usage: nodemon [nodemon options] [script.js] [args]
+
+  See &quot;nodemon --help&quot; for more.</code></pre><p>安装这个包是为了可以让服务端的代码改变之后，按Ctrl+s可以自动重启服务。</p>
+<h3 id="运行express"><a href="#运行express" class="headerlink" title="运行express"></a>运行express</h3><p>在服务端的路径之下运行此服务端。</p>
+<pre><code>nodemon server.js</code></pre><pre><code>[nodemon] 2.0.15
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+服务以及启动，8090  端口监听中</code></pre><pre><code>// 导入express模块
+const express = require(&#39;express&#39;);
+const app = express();
+app.get(&#39;/&#39;, (request, response) =&gt; {
+    // 设置响应
+    response.send(&#39;HELLO EXPRESS&#39;)
+});
+app.listen(8090, () =&gt; {
+    console.log(&quot;服务以及启动，8090  端口监听中&quot;)
+})</code></pre><p>在浏览器的url中输入</p>
+<pre><code>localhost:8090</code></pre><p>可以看到后端服务已经可以开始运行了。</p>
+<p><img src="Ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/express.png" alt></p>
+<h1 id="发送Ajax请求"><a href="#发送Ajax请求" class="headerlink" title="发送Ajax请求"></a>发送Ajax请求</h1><h3 id="发送GET请求"><a href="#发送GET请求" class="headerlink" title="发送GET请求"></a>发送GET请求</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token selector"><span class="token id">#result</span> </span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> solid <span class="token number">1</span>px <span class="token hexcode">#90b</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>点击发送请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>result<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 创建对象</span>
+            <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 设置请求方法和url</span>
+            xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'http://localhost:8090/server?a=100&amp;b=200&amp;c=300'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 发送</span>
+            xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 事件绑定</span>
+            <span class="token comment" spellcheck="true">// on 当---时候</span>
+            <span class="token comment" spellcheck="true">// readystate 是 xhr 对象的属性 表示状态0（初始化） 1（open） 2（send） 3（部分结果） 4（全部结果）</span>
+            <span class="token comment" spellcheck="true">// change 改变</span>
+            xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 判断服务端是否返回了所有结果</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 判断相应装填码200 404 403 401 500</span>
+                    <span class="token comment" spellcheck="true">// 2开头一般都表示成功</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">>=</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// 处理结果 行 头 空行 体</span>
+                        <span class="token comment" spellcheck="true">// 1.相应行</span>
+                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 42 200</span>
+                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 43 OK</span>
+                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>getAllResponseHeaders<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 44 ƒ getAllResponseHeaders() { [native code] }</span>
+                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 45 HELLO AJAX</span>
+                        result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"测试失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>前端展示页面如下图所示</p>
+<p><img src="Ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.png" alt></p>
+<p>点击按钮可以看到请求发送成功</p>
+<p><img src="Ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2.png" alt></p>
+<p>利用浏览器开发者工具，点击网络按钮，就可以看到具体的网路请求信息。</p>
+<p><img src="Ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/3.png" alt></p>
+<p><img src="Ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/4.png" alt></p>
 
             </div>
             <hr />
@@ -1101,9 +1060,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《VMware 安装 CentOS 8.1 完整教程 》
+                    《Ajax学习笔记》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/ajax-xue-xi-bi-ji.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 Peter Pan
             </a> 采用
@@ -1405,92 +1364,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/1.html">
+                <a href="/ajax-xue-xi-bi-ji.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Github + Hexo 搭建个人博客超详细教程">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Ajax学习笔记">
                         
-                        <span class="card-title">Github + Hexo 搭建个人博客超详细教程</span>
+                        <span class="card-title">Ajax学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搭建博客的初衷是希望用博客记录下自己的学习过程，帮助自己复习。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-13
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Blog/" class="post-category" target="_blank">
-                                    Blog
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Github/" target="_blank">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/博客搭建/" target="_blank">
-                        <span class="chip bg-color">博客搭建</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="VMware 安装 CentOS 8.1 完整教程 ">
-                        
-                        <span class="card-title">VMware 安装 CentOS 8.1 完整教程 </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            这篇文章详细的记录我安装CentOS 8.1的过程，其他CentOS 8系列的发行版本安装可作参考。
+                            Ajax学习笔记，学习Ajax是为了实现前端后后端的数据交互。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/Ajax/" class="post-category" target="_blank">
+                                    Ajax
                                 </a>
                             
                             
@@ -1501,12 +1404,65 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VMware/" target="_blank">
-                        <span class="chip bg-color">VMware</span>
+                    <a href="/tags/Ajax/" target="_blank">
+                        <span class="chip bg-color">Ajax</span>
                     </a>
                     
-                    <a href="/tags/CentOS/" target="_blank">
-                        <span class="chip bg-color">CentOS</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/5.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="数据结构走迷宫">
+                        
+                        <span class="card-title">数据结构走迷宫</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            利用堆栈结构实现走迷宫，并且用OpenCV进行可视化展示
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
+                                </a>
+                            
+                            <a href="/categories/C/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Algorithm/" target="_blank">
+                        <span class="chip bg-color">Algorithm</span>
+                    </a>
+                    
+                    <a href="/tags/C/" target="_blank">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
