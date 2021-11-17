@@ -871,10 +871,10 @@ if __name__ == &#39;__main__&#39;:
     app.run(debug=True, host=&quot;0.0.0.0&quot;, port=5050)</code></pre><p>注意，由于是将文件在docker中的linux环境运行，所以端口号不是<strong>127.0.0.1</strong>而是<strong>0.0.0.0</strong>。</p>
 <p>这样的话，在浏览器的url中输入</p>
 <pre><code>localhost:5000</code></pre><p>就可以访问到数据了</p>
-<h2 id="docker启动错误解决"><a href="#docker启动错误解决" class="headerlink" title="docker启动错误解决"></a>docker启动错误解决</h2><p><img src="2/error1.png" alt></p>
-<p><img src="2/error2.png" alt></p>
+<h2 id="docker启动错误解决"><a href="#docker启动错误解决" class="headerlink" title="docker启动错误解决"></a>docker启动错误解决</h2><p><img src="/2/error1.png" alt></p>
+<p><img src="/2/error2.png" alt></p>
 <p>以管理员方式打开CMD, 运行<code>netsh winsock reset</code> 后, 再次启动Docker就可以了。</p>
-<p><img src="2/3.png" alt></p>
+<p><img src="/2/3.png" alt></p>
 
             </div>
             <hr />
