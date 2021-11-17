@@ -774,7 +774,7 @@ fatal: unable">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    272
+                    341
                 </div>
                 
 
@@ -817,6 +817,13 @@ Resolving deltas: 100% (68/68), done.</code></pre><h4 id="Time-Out"><a href="#Ti
 fatal: unable to access &#39;https://github.com/1977474741/vue-waterfall-rapid.git/&#39;: Failed to connect to github.com port 443: Timed out</code></pre><p>解决方式：找到C:\Windows\System32\drivers\etc\hosts文件，把与github有关的行注释掉即可。</p>
 <p><img src="/git-command-notes/1.png" alt></p>
 <p><img src="/git-command-notes/2.png" alt></p>
+<p>取消代理设置</p>
+<pre><code>git config --global --unset http.proxy</code></pre><p>再进行clone</p>
+<pre><code>git clone https://github.com/itagn/vue-iresume.git</code></pre><pre><code>Cloning into &#39;vue-iresume&#39;...
+remote: Enumerating objects: 455, done.
+remote: Total 455 (delta 0), reused 0 (delta 0), pack-reused 455
+Receiving objects: 100% (455/455), 367.11 KiB | 402.00 KiB/s, done.
+Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
 
             </div>
             <hr />
@@ -1545,7 +1552,7 @@ fatal: unable to access &#39;https://github.com/1977474741/vue-waterfall-rapid.g
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.1k
+            <span class="white-color">12.2k
              丨            
           
 
@@ -1635,7 +1642,7 @@ fatal: unable to access &#39;https://github.com/1977474741/vue-waterfall-rapid.g
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12.1k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12.2k</span>
     </div>
 </footer>
 
