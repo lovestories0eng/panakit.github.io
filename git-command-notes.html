@@ -4,11 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Ajax学习笔记, 被动学习">
+    <meta name="keywords" content="git-command-notes, 被动学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="Node环境部署安装express后端框架npm install expressnpm WARN saveError ENOENT: no such file or directory, open &amp;#39;D:\Users\HP\Desk">
+    <meta name="description" content="git clone错误git clone https://github.com/maclxf/supermall.git报错：
+Cloning into &amp;#39;supermall&amp;#39;...
+fatal: unable to acc">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Ajax学习笔记 | Peter Pan的后花园</title>
+    <title>git-command-notes | Peter Pan的后花园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -617,13 +619,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Ajax学习笔记
+                        git-command-notes
                     </div>
                 </div>
             </div>
@@ -734,8 +736,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Ajax/" target="_blank">
-                            <span class="chip bg-color">Ajax</span>
+                        <a href="/tags/git/" target="_blank">
+                            <span class="chip bg-color">git</span>
                         </a>
                         
                     </div>
@@ -746,8 +748,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Ajax/" class="post-category" target="_blank">
-                            Ajax
+                        <a href="/categories/git/" class="post-category" target="_blank">
+                            git
                         </a>
                         
                     </div>
@@ -772,14 +774,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    746
+                    198
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
                 
@@ -795,114 +797,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Node环境部署"><a href="#Node环境部署" class="headerlink" title="Node环境部署"></a>Node环境部署</h1><h3 id="安装express后端框架"><a href="#安装express后端框架" class="headerlink" title="安装express后端框架"></a>安装express后端框架</h3><pre><code>npm install express</code></pre><pre><code>npm WARN saveError ENOENT: no such file or directory, open &#39;D:\Users\HP\Desktop\tech\前端开发\AjaxLearn\package.json&#39;
-npm WARN enoent ENOENT: no such file or directory, open &#39;D:\Users\HP\Desktop\tech\前端开发\AjaxLearn\package.json&#39;
-npm WARN AjaxLearn No description
-npm WARN AjaxLearn No repository field.
-npm WARN AjaxLearn No README data
-npm WARN AjaxLearn No license field.
-
-+ express@4.17.1
-added 50 packages from 37 contributors in 2.194s</code></pre><h3 id="安装nodemon包"><a href="#安装nodemon包" class="headerlink" title="安装nodemon包"></a>安装nodemon包</h3><pre><code>npm install -g nodemon</code></pre><pre><code>D:\nodejs\nodemon -&gt; D:\nodejs\node_modules\nodemon\bin\nodemon.js
-
-&gt; nodemon@2.0.15 postinstall D:\nodejs\node_modules\nodemon
-&gt; node bin/postinstall || exit 0
-
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules\nodemon\node_modules\chokidar\node_modules\fsevents):
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;})
-
-+ nodemon@2.0.15
-added 116 packages from 53 contributors in 4.331s
-(base) PS D:\Users\HP\Desktop\tech\前端开发\AjaxLearn&gt; nodemon
-  Usage: nodemon [nodemon options] [script.js] [args]
-
-  See &quot;nodemon --help&quot; for more.</code></pre><p>安装这个包是为了可以让服务端的代码改变之后，按Ctrl+s可以自动重启服务。</p>
-<h3 id="运行express"><a href="#运行express" class="headerlink" title="运行express"></a>运行express</h3><p>在服务端的路径之下运行此服务端。</p>
-<pre><code>nodemon server.js</code></pre><pre><code>[nodemon] 2.0.15
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching path(s): *.*
-[nodemon] watching extensions: js,mjs,json
-[nodemon] starting `node server.js`
-服务以及启动，8090  端口监听中</code></pre><pre><code>// 导入express模块
-const express = require(&#39;express&#39;);
-const app = express();
-app.get(&#39;/&#39;, (request, response) =&gt; {
-    // 设置响应
-    response.send(&#39;HELLO EXPRESS&#39;)
-});
-app.listen(8090, () =&gt; {
-    console.log(&quot;服务以及启动，8090  端口监听中&quot;)
-})</code></pre><p>在浏览器的url中输入</p>
-<pre><code>localhost:8090</code></pre><p>可以看到后端服务已经可以开始运行了。</p>
-<p><img src="/6-ajaxnotes/express.png" alt></p>
-<h1 id="发送Ajax请求"><a href="#发送Ajax请求" class="headerlink" title="发送Ajax请求"></a>发送Ajax请求</h1><h3 id="发送GET请求"><a href="#发送GET请求" class="headerlink" title="发送GET请求"></a>发送GET请求</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
-        <span class="token selector"><span class="token id">#result</span> </span><span class="token punctuation">{</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
-            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
-            <span class="token property">border</span><span class="token punctuation">:</span> solid <span class="token number">1</span>px <span class="token hexcode">#90b</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>点击发送请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>result<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-        <span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// 创建对象</span>
-            <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"result"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 设置请求方法和url</span>
-            xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'http://localhost:8090/server?a=100&amp;b=200&amp;c=300'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 发送</span>
-            xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 事件绑定</span>
-            <span class="token comment" spellcheck="true">// on 当---时候</span>
-            <span class="token comment" spellcheck="true">// readystate 是 xhr 对象的属性 表示状态0（初始化） 1（open） 2（send） 3（部分结果） 4（全部结果）</span>
-            <span class="token comment" spellcheck="true">// change 改变</span>
-            xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 判断服务端是否返回了所有结果</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token comment" spellcheck="true">// 判断相应装填码200 404 403 401 500</span>
-                    <span class="token comment" spellcheck="true">// 2开头一般都表示成功</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">>=</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">// 处理结果 行 头 空行 体</span>
-                        <span class="token comment" spellcheck="true">// 1.相应行</span>
-                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 42 200</span>
-                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 43 OK</span>
-                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>getAllResponseHeaders<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 44 ƒ getAllResponseHeaders() { [native code] }</span>
-                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// GET.html: 45 HELLO AJAX</span>
-                        result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"测试失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>前端展示页面如下图所示</p>
-<p><img src="/6-ajaxnotes/1.png" alt></p>
-<p>点击按钮可以看到请求发送成功</p>
-<p><img src="/6-ajaxnotes/2.png" alt></p>
-<p>利用浏览器开发者工具，点击网络按钮，就可以看到具体的网路请求信息。</p>
-<p><img src="/6-ajaxnotes/3.png" alt></p>
-<p><img src="/6-ajaxnotes/4.png" alt></p>
-
+                <h3 id="git-clone错误"><a href="#git-clone错误" class="headerlink" title="git clone错误"></a>git clone错误</h3><pre><code>git clone https://github.com/maclxf/supermall.git</code></pre><p>报错：</p>
+<pre><code>Cloning into &#39;supermall&#39;...
+fatal: unable to access &#39;https://github.com/maclxf/supermall.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054</code></pre><p>这是服务器的SSL证书，没有经过第三方签名，所以报错。</p>
+<p>如果是由网络不稳定和连接超时引起的。再次尝试的话，您仍然会报告一个错误。</p>
+<p>解决方式如下：</p>
+<pre><code>git config --global http.sslVerify &quot;false&quot;
+git init</code></pre><p>会看到如下结果</p>
+<pre><code>Initialized empty Git repository in D:/Users/HP/Desktop/Projects/.git/</code></pre><p>重新clone</p>
+<pre><code>git clone https://github.com/maclxf/supermall.git</code></pre><p>成功！</p>
+<pre><code>Cloning into &#39;supermall&#39;...
+remote: Enumerating objects: 200, done.
+remote: Counting objects: 100% (200/200), done.
+remote: Compressing objects: 100% (152/152), done.
+Receiving objects:  88% (176/200)ote: Total 200 (delta 68), reused 139 (delta 27), pack-reused 0
+Receiving objects: 100% (200/200), 198.04 KiB | 594.00 KiB/s, done.
+Resolving deltas: 100% (68/68), done.</code></pre>
             </div>
             <hr />
 
@@ -1060,9 +970,9 @@ app.listen(8090, () =&gt; {
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Ajax学习笔记》
+                    《git-command-notes》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/6-ajaxnotes.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/git-command-notes.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 Peter Pan
             </a> 采用
@@ -1364,9 +1274,10 @@ app.listen(8090, () =&gt; {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/git-command-notes.html">
                     <div class="card-image">
@@ -1384,9 +1295,9 @@ app.listen(8090, () =&gt; {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1399,6 +1310,7 @@ app.listen(8090, () =&gt; {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1417,35 +1329,31 @@ app.listen(8090, () =&gt; {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/5.html">
+                <a href="/6-ajaxnotes.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="数据结构走迷宫">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Ajax学习笔记">
                         
-                        <span class="card-title">数据结构走迷宫</span>
+                        <span class="card-title">Ajax学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用堆栈结构实现走迷宫，并且用OpenCV进行可视化展示
+                            Ajax学习笔记，学习Ajax是为了实现前端后后端的数据交互。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category" target="_blank">
-                                    C++
-                                </a>
-                            
-                            <a href="/categories/C/Algorithm/" class="post-category" target="_blank">
-                                    Algorithm
+                            <a href="/categories/Ajax/" class="post-category" target="_blank">
+                                    Ajax
                                 </a>
                             
                             
@@ -1455,12 +1363,8 @@ app.listen(8090, () =&gt; {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Algorithm/" target="_blank">
-                        <span class="chip bg-color">Algorithm</span>
-                    </a>
-                    
-                    <a href="/tags/C/" target="_blank">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/Ajax/" target="_blank">
+                        <span class="chip bg-color">Ajax</span>
                     </a>
                     
                 </div>

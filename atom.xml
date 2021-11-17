@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-11-17T03:38:23.446Z</updated>
+  <updated>2021-11-17T10:35:04.428Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-command-notes</title>
+    <link href="https://pshtrophycloud.com/git-command-notes.html"/>
+    <id>https://pshtrophycloud.com/git-command-notes.html</id>
+    <published>2021-11-17T10:27:47.000Z</published>
+    <updated>2021-11-17T10:35:04.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;git-clone错误&quot;&gt;&lt;a href=&quot;#git-clone错误&quot; class=&quot;headerlink&quot; title=&quot;git clone错误&quot;&gt;&lt;/a&gt;git clone错误&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;git clone
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://pshtrophycloud.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://pshtrophycloud.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>Ajax学习笔记</title>
