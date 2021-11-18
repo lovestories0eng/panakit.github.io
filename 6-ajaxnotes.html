@@ -617,7 +617,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -772,14 +772,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    746
+                    815
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
                 
@@ -823,13 +823,25 @@ added 116 packages from 53 contributors in 4.331s
 [nodemon] watching path(s): *.*
 [nodemon] watching extensions: js,mjs,json
 [nodemon] starting `node server.js`
-服务以及启动，8090  端口监听中</code></pre><pre><code>// 导入express模块
+服务以及启动，8090  端口监听中</code></pre><p><strong>server.js文件*</strong></p>
+<pre><code>// 导入express模块
 const express = require(&#39;express&#39;);
 const app = express();
 app.get(&#39;/&#39;, (request, response) =&gt; {
     // 设置响应
     response.send(&#39;HELLO EXPRESS&#39;)
 });
+
+// 可以接受任何类型的请求
+app.all(&#39;/server&#39;, (request, response) =&gt; {
+    // 设置响应头，设置允许跨域
+    response.setHeader(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;);
+    //响应头
+    response.setHeader(&#39;Access-Control-Allow-Headers&#39;, &#39;*&#39;)
+        // 设置响应体
+    response.send(&#39;HELLO AJAX POST&#39;)
+});
+
 app.listen(8090, () =&gt; {
     console.log(&quot;服务以及启动，8090  端口监听中&quot;)
 })</code></pre><p>在浏览器的url中输入</p>
@@ -1372,7 +1384,7 @@ app.listen(8090, () =&gt; {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="git常用命令和错误排除">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="git常用命令和错误排除">
                         
                         <span class="card-title">git常用命令和错误排除</span>
                     </div>
@@ -1421,7 +1433,7 @@ app.listen(8090, () =&gt; {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="数据结构走迷宫">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构走迷宫">
                         
                         <span class="card-title">数据结构走迷宫</span>
                     </div>
@@ -1636,7 +1648,7 @@ app.listen(8090, () =&gt; {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.2k
+            <span class="white-color">12.3k
              丨            
           
 
@@ -1726,7 +1738,7 @@ app.listen(8090, () =&gt; {
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12.2k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12.3k</span>
     </div>
 </footer>
 
