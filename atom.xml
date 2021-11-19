@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-11-17T11:37:43.292Z</updated>
+  <updated>2021-11-18T14:15:42.449Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在file协议下读取本地json文件</title>
+    <link href="https://pshtrophycloud.com/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian.html"/>
+    <id>https://pshtrophycloud.com/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian.html</id>
+    <published>2021-11-18T13:59:00.000Z</published>
+    <updated>2021-11-18T14:15:42.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;在一般情况下请求本地json数据&quot;&gt;&lt;a href=&quot;#在一般情况下请求本地json数据&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://pshtrophycloud.com/categories/Python/"/>
+    
+      <category term="JavaScript" scheme="https://pshtrophycloud.com/categories/Python/JavaScript/"/>
+    
+      <category term="HTML" scheme="https://pshtrophycloud.com/categories/Python/JavaScript/HTML/"/>
+    
+    
+      <category term="Python" scheme="https://pshtrophycloud.com/tags/Python/"/>
+    
+      <category term="JavaScript" scheme="https://pshtrophycloud.com/tags/JavaScript/"/>
+    
+      <category term="HTML" scheme="https://pshtrophycloud.com/tags/HTML/"/>
+    
+  </entry>
   
   <entry>
     <title>git常用命令和错误排除</title>
@@ -73,7 +107,7 @@
     <link href="https://pshtrophycloud.com/5.html"/>
     <id>https://pshtrophycloud.com/5.html</id>
     <published>2021-11-15T13:56:31.000Z</published>
-    <updated>2021-11-15T14:05:59.915Z</updated>
+    <updated>2021-11-19T03:44:12.852Z</updated>
     
     <summary type="html">
     
