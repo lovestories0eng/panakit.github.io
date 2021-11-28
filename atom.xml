@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-11-19T13:37:36.641Z</updated>
+  <updated>2021-11-28T03:20:46.671Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用Vue和elementUI制作一个登录界面</title>
+    <link href="https://pshtrophycloud.com/yong-vue-he-elementui-zhi-zuo-yi-ge-deng-lu-jie-mian.html"/>
+    <id>https://pshtrophycloud.com/yong-vue-he-elementui-zhi-zuo-yi-ge-deng-lu-jie-mian.html</id>
+    <published>2021-11-28T02:46:42.000Z</published>
+    <updated>2021-11-28T03:20:46.671Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;利用elementUI来进行界面的开发，利用Vue来实现路由跳转，Vue和elementUI是当今比较流行的一个开发框架。&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://pshtrophycloud.com/categories/Vue/"/>
+    
+      <category term="element UI" scheme="https://pshtrophycloud.com/categories/Vue/element-UI/"/>
+    
+      <category term="JavaScript" scheme="https://pshtrophycloud.com/categories/Vue/element-UI/JavaScript/"/>
+    
+    
+      <category term="Vue" scheme="https://pshtrophycloud.com/tags/Vue/"/>
+    
+      <category term="element UI" scheme="https://pshtrophycloud.com/tags/element-UI/"/>
+    
+      <category term="JavaScript" scheme="https://pshtrophycloud.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>在file协议下读取本地json文件</title>
@@ -42,9 +77,9 @@
       <category term="HTML" scheme="https://pshtrophycloud.com/categories/Python/JavaScript/HTML/"/>
     
     
-      <category term="Python" scheme="https://pshtrophycloud.com/tags/Python/"/>
-    
       <category term="JavaScript" scheme="https://pshtrophycloud.com/tags/JavaScript/"/>
+    
+      <category term="Python" scheme="https://pshtrophycloud.com/tags/Python/"/>
     
       <category term="HTML" scheme="https://pshtrophycloud.com/tags/HTML/"/>
     
