@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-11-28T03:20:46.671Z</updated>
+  <updated>2021-12-01T03:33:18.970Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决mysql服务无法启动</title>
+    <link href="https://pshtrophycloud.com/jie-jue-mysql-fu-wu-wu-fa-qi-dong.html"/>
+    <id>https://pshtrophycloud.com/jie-jue-mysql-fu-wu-wu-fa-qi-dong.html</id>
+    <published>2021-12-01T03:27:45.000Z</published>
+    <updated>2021-12-01T03:33:18.970Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;mysqld --initialize --user=root --console&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;2021-12-01T03:25:37.412027Z 0 [System] [MY-013169] [Server]
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://pshtrophycloud.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://pshtrophycloud.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>用Vue和elementUI制作一个登录界面</title>
