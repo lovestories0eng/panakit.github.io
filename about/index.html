@@ -820,7 +820,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         },
         xAxis: {
             type: 'category',
-            data: ["2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11"]
+            data: ["2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12"]
         },
         yAxis: {
             type: 'value',
@@ -830,7 +830,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,10],
+                data: [0,0,0,0,0,0,0,0,0,0,0,10,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -872,7 +872,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"docker","value":1},{"name":"Blog","value":1},{"name":"Java","value":2},{"name":"C++","value":1},{"name":"Ajax","value":1},{"name":"Linux","value":1},{"name":"Vue","value":1},{"name":"Algorithm","value":1},{"name":"git","value":1},{"name":"Python","value":1},{"name":"Algorithm","value":1},{"name":"element UI","value":1},{"name":"JavaScript","value":1},{"name":"JavaScript","value":1},{"name":"HTML","value":1}],
+                data: [{"name":"Blog","value":1},{"name":"docker","value":1},{"name":"Java","value":2},{"name":"Ajax","value":1},{"name":"C++","value":1},{"name":"git","value":1},{"name":"Linux","value":1},{"name":"Python","value":1},{"name":"Vue","value":1},{"name":"Algorithm","value":1},{"name":"Algorithm","value":1},{"name":"JavaScript","value":1},{"name":"element UI","value":1},{"name":"HTML","value":1},{"name":"JavaScript","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -896,7 +896,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["Java","Algorithm","JavaScript","docker","Github","Hexo","博客搭建","C++","Ajax","VMware"]
+                data: ["Java","Algorithm","JavaScript","Github","Hexo","博客搭建","docker","Ajax","C++","git"]
             }
         ],
         yAxis: [
@@ -1029,12 +1029,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/docker/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">docker</span>
-            </a>
-            
-            
-            
             <a href="/tags/Github/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Github</span>
             </a>
@@ -1053,6 +1047,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/docker/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">docker</span>
+            </a>
+            
+            
+            
             
             
             <a href="/tags/Algorithm/" target="_blank">
@@ -1061,10 +1061,16 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            
-            
             <a href="/tags/Ajax/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Ajax</span>
+            </a>
+            
+            
+            
+            
+            
+            <a href="/tags/git/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">git</span>
             </a>
             
             
@@ -1081,16 +1087,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/Vue/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Vue</span>
-            </a>
-            
-            
-            
-            <a href="/tags/element-UI/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">element UI</span>
-            </a>
-            
             
             
             <a href="/tags/JavaScript/" target="_blank">
@@ -1099,16 +1095,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/git/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">git</span>
+            <a href="/tags/HTML/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">HTML</span>
             </a>
             
             
             
+            <a href="/tags/Vue/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Vue</span>
+            </a>
             
             
-            <a href="/tags/HTML/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">HTML</span>
+            
+            <a href="/tags/element-UI/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">element UI</span>
             </a>
             
             
