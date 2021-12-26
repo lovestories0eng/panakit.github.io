@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pshtrophycloud.com/friends/index.html</loc>
+    
+    <lastmod>2021-12-26T13:31:41.925Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pshtrophycloud.com/acm-test-first.html</loc>
     
     <lastmod>2021-12-26T13:12:58.221Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://pshtrophycloud.com/about/index.html</loc>
     
     <lastmod>2021-11-14T05:18:19.678Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pshtrophycloud.com/friends/index.html</loc>
-    
-    <lastmod>2021-11-14T05:09:29.956Z</lastmod>
     
   </url>
   
