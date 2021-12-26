@@ -4,14 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="在file协议下读取本地json文件, 被动学习">
+    <meta name="keywords" content="ACM-test-first, 被动学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="在一般情况下请求本地json数据Python爬取股票json数据
-import tushare as ts
-token=&#39;15e164e74f082e80c989dfb93b1d937ee95b83ea78b2c5bf1d5db211&#39;
-p">
+    <meta name="description" content="Problem AProblem Description有一天，小猪佩奇去堂姐家玩，认识了两个新朋友，分别是松鼠西蒙和小熊贝琳达。佩奇和新朋友一起做蛋糕，佩奇做了一个正方形的蛋糕，西蒙做了一个长方形的蛋糕，贝琳达做了一个三角形的蛋糕。
+现在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ p">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>在file协议下读取本地json文件 | Peter Pan的后花园</title>
+    <title>ACM-test-first | Peter Pan的后花园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -620,13 +618,13 @@ p">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/45.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        在file协议下读取本地json文件
+                        ACM-test-first
                     </div>
                 </div>
             </div>
@@ -736,40 +734,11 @@ p">
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/Python/" target="_blank">
-                            <span class="chip bg-color">Python</span>
-                        </a>
-                        
-                        <a href="/tags/JavaScript/" target="_blank">
-                            <span class="chip bg-color">JavaScript</span>
-                        </a>
-                        
-                        <a href="/tags/HTML/" target="_blank">
-                            <span class="chip bg-color">HTML</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/Python/" class="post-category" target="_blank">
-                            Python
-                        </a>
-                        
-                        <a href="/categories/Python/JavaScript/" class="post-category" target="_blank">
-                            JavaScript
-                        </a>
-                        
-                        <a href="/categories/Python/JavaScript/HTML/" class="post-category" target="_blank">
-                            HTML
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -777,7 +746,7 @@ p">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-18
+                    2021-12-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -791,14 +760,14 @@ p">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    4 分
                 </div>
                 
                 
@@ -814,268 +783,323 @@ p">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="在一般情况下请求本地json数据"><a href="#在一般情况下请求本地json数据" class="headerlink" title="在一般情况下请求本地json数据"></a>在一般情况下请求本地json数据</h1><p><strong>Python爬取股票json数据</strong></p>
-<pre class="line-numbers language-Python"><code class="language-Python">import tushare as ts
-token='15e164e74f082e80c989dfb93b1d937ee95b83ea78b2c5bf1d5db211'
-pro=ts.pro_api(token)
-df = pro.index_dailybasic(trade_date='20181018')
-df.to_json()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian/DataFrame.png" alt></p>
-<p><strong>引入jQuery</strong></p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-    <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        $<span class="token punctuation">.</span><span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token string">"stock_data.json"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> stock_data <span class="token operator">=</span> data<span class="token punctuation">;</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stock_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>出现如下错误：</p>
-<p><img src="/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian/CORS.png" alt></p>
-<p>这是因为此时jQuery是在file协议下请求本地数据的，但是跨源请求只支持协议的模式为:http, data, chrome-extension, edge, https, chrome-untrusted。</p>
-<p>让我们来看看要请求的json数据格式</p>
-<pre><code>{
-    &quot;ts_code&quot;: {
-        &quot;0&quot;: &quot;000001.SH&quot;,
-        &quot;1&quot;: &quot;000300.SH&quot;,
-        &quot;2&quot;: &quot;000905.SH&quot;,
-        &quot;3&quot;: &quot;399001.SZ&quot;,
-        &quot;4&quot;: &quot;399005.SZ&quot;,
-        &quot;5&quot;: &quot;399006.SZ&quot;,
-        &quot;6&quot;: &quot;399016.SZ&quot;,
-        &quot;7&quot;: &quot;399300.SZ&quot;,
-        &quot;8&quot;: &quot;000005.SH&quot;,
-        &quot;9&quot;: &quot;000006.SH&quot;,
-        &quot;10&quot;: &quot;000016.SH&quot;,
-        &quot;11&quot;: &quot;399905.SZ&quot;
-    },
-    &quot;trade_date&quot;: {
-        &quot;0&quot;: &quot;20181018&quot;,
-        &quot;1&quot;: &quot;20181018&quot;,
-        &quot;2&quot;: &quot;20181018&quot;,
-        &quot;3&quot;: &quot;20181018&quot;,
-        &quot;4&quot;: &quot;20181018&quot;,
-        &quot;5&quot;: &quot;20181018&quot;,
-        &quot;6&quot;: &quot;20181018&quot;,
-        &quot;7&quot;: &quot;20181018&quot;,
-        &quot;8&quot;: &quot;20181018&quot;,
-        &quot;9&quot;: &quot;20181018&quot;,
-        &quot;10&quot;: &quot;20181018&quot;,
-        &quot;11&quot;: &quot;20181018&quot;
-    },
-    &quot;total_mv&quot;: {
-        &quot;0&quot;: 31699180114564.0,
-        &quot;1&quot;: 29449418462967.0,
-        &quot;2&quot;: 5687430983317.0,
-        &quot;3&quot;: 10179054112565.0,
-        &quot;4&quot;: 3085045567981.0,
-        &quot;5&quot;: 1693944514908.0,
-        &quot;6&quot;: 2185432734692.0,
-        &quot;7&quot;: 29449418462967.0,
-        &quot;8&quot;: 1295146513074.0,
-        &quot;9&quot;: 589008238469.0,
-        &quot;10&quot;: 16101657858757.0,
-        &quot;11&quot;: 5687430983317.0
-    },
-    &quot;float_mv&quot;: {
-        &quot;0&quot;: 22966231985204.0,
-        &quot;1&quot;: 21842573432592.0,
-        &quot;2&quot;: 4465633892148.0,
-        &quot;3&quot;: 7705370463348.0,
-        &quot;4&quot;: 2228893363286.0,
-        &quot;5&quot;: 1083815980254.0,
-        &quot;6&quot;: 1703092728155.0,
-        &quot;7&quot;: 21842573432592.0,
-        &quot;8&quot;: 618617244719.0,
-        &quot;9&quot;: 509355526925.0,
-        &quot;10&quot;: 12779078542269.0,
-        &quot;11&quot;: 4465633892148.0
-    },
-    &quot;total_share&quot;: {
-        &quot;0&quot;: 4442798161247.0,
-        &quot;1&quot;: 3691970608877.0,
-        &quot;2&quot;: 881140150403.0,
-        &quot;3&quot;: 1088737425967.0,
-        &quot;4&quot;: 244211463062.0,
-        &quot;5&quot;: 128802865087.0,
-        &quot;6&quot;: 174493828078.0,
-        &quot;7&quot;: 3691970608877.0,
-        &quot;8&quot;: 168601053467.0,
-        &quot;9&quot;: 91344316299.0,
-        &quot;10&quot;: 2046429718322.0,
-        &quot;11&quot;: 881140150403.0
-    },
-    &quot;float_share&quot;: {
-        &quot;0&quot;: 3289875967605.0,
-        &quot;1&quot;: 2703135408430.0,
-        &quot;2&quot;: 724932684320.0,
-        &quot;3&quot;: 845773870058.0,
-        &quot;4&quot;: 179801475990.0,
-        &quot;5&quot;: 93587976448.0,
-        &quot;6&quot;: 140943430195.0,
-        &quot;7&quot;: 2703135408430.0,
-        &quot;8&quot;: 87261145444.0,
-        &quot;9&quot;: 80701448890.0,
-        &quot;10&quot;: 1608871537660.0,
-        &quot;11&quot;: 724932684320.0
-    },
-    &quot;free_share&quot;: {
-        &quot;0&quot;: 1243989478731.0,
-        &quot;1&quot;: 928883774793.0,
-        &quot;2&quot;: 415536426546.0,
-        &quot;3&quot;: 509473831228.0,
-        &quot;4&quot;: 110333344951.0,
-        &quot;5&quot;: 69877922054.0,
-        &quot;6&quot;: 95872144544.0,
-        &quot;7&quot;: 928883774793.0,
-        &quot;8&quot;: 60194793605.0,
-        &quot;9&quot;: 32822641439.0,
-        &quot;10&quot;: 377997983573.0,
-        &quot;11&quot;: 415536426546.0
-    },
-    &quot;turnover_rate&quot;: {
-        &quot;0&quot;: 0.38,
-        &quot;1&quot;: 0.27,
-        &quot;2&quot;: 0.82,
-        &quot;3&quot;: 0.88,
-        &quot;4&quot;: 0.85,
-        &quot;5&quot;: 1.5,
-        &quot;6&quot;: 1.06,
-        &quot;7&quot;: 0.27,
-        &quot;8&quot;: 0.76,
-        &quot;9&quot;: 0.46,
-        &quot;10&quot;: 0.14,
-        &quot;11&quot;: 0.82
-    },
-    &quot;turnover_rate_f&quot;: {
-        &quot;0&quot;: 1.01,
-        &quot;1&quot;: 0.79,
-        &quot;2&quot;: 1.44,
-        &quot;3&quot;: 1.46,
-        &quot;4&quot;: 1.39,
-        &quot;5&quot;: 2.01,
-        &quot;6&quot;: 1.56,
-        &quot;7&quot;: 0.79,
-        &quot;8&quot;: 1.1,
-        &quot;9&quot;: 1.14,
-        &quot;10&quot;: 0.6,
-        &quot;11&quot;: 1.44
-    },
-    &quot;pe&quot;: {
-        &quot;0&quot;: 11.92,
-        &quot;1&quot;: 11.17,
-        &quot;2&quot;: 18.03,
-        &quot;3&quot;: 17.48,
-        &quot;4&quot;: 21.43,
-        &quot;5&quot;: 29.56,
-        &quot;6&quot;: 18.86,
-        &quot;7&quot;: 11.17,
-        &quot;8&quot;: 12.74,
-        &quot;9&quot;: 7.65,
-        &quot;10&quot;: 10.01,
-        &quot;11&quot;: 18.03
-    },
-    &quot;pe_ttm&quot;: {
-        &quot;0&quot;: 11.13,
-        &quot;1&quot;: 10.47,
-        &quot;2&quot;: 16.65,
-        &quot;3&quot;: 16.16,
-        &quot;4&quot;: 19.55,
-        &quot;5&quot;: 27.04,
-        &quot;6&quot;: 17.93,
-        &quot;7&quot;: 10.47,
-        &quot;8&quot;: 12.58,
-        &quot;9&quot;: 7.09,
-        &quot;10&quot;: 9.33,
-        &quot;11&quot;: 16.65
-    },
-    &quot;pb&quot;: {
-        &quot;0&quot;: 1.28,
-        &quot;1&quot;: 1.3,
-        &quot;2&quot;: 1.51,
-        &quot;3&quot;: 1.93,
-        &quot;4&quot;: 2.73,
-        &quot;5&quot;: 3.2,
-        &quot;6&quot;: 2.72,
-        &quot;7&quot;: 1.3,
-        &quot;8&quot;: 1.19,
-        &quot;9&quot;: 1.13,
-        &quot;10&quot;: 1.17,
-        &quot;11&quot;: 1.51
+                <h2 id="Problem-A"><a href="#Problem-A" class="headerlink" title="Problem A"></a>Problem A</h2><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>有一天，小猪佩奇去堂姐家玩，认识了两个新朋友，分别是松鼠西蒙和小熊贝琳达。佩奇和新朋友一起做蛋糕，佩奇做了一个正方形的蛋糕，西蒙做了一个长方形的蛋糕，贝琳达做了一个三角形的蛋糕。</p>
+<p>现在，他们想知道谁做的蛋糕面积最大，但是他们不会算蛋糕的面积大小，他们决定求助你来解决这个问题。</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>第一行是数据组数N，代表有N组测试实例。</p>
+<p>接下来有N行，每行有五个整数A,B,C,D,E（0&lt;A,B,C,D,E&lt;100）。<br>其中A代表小猪佩奇正方形蛋糕的边长。<br>B,C代表松鼠西蒙长方形蛋糕的长和宽。<br>D,E代表小熊贝琳达三角形蛋糕的底和高。</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>如果小猪佩奇的蛋糕最大，输出“Perch”<br>如果松鼠西蒙的蛋糕最大，输出“Semon”<br>如果小熊贝琳达的蛋糕最大，输出“Belinda”<br>每个测试实例结果占一行，数据确保三个蛋糕大小各不相同。</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>3
+2 1 5 2 3
+5 4 6 7 8
+6 2 3 4 5</code></pre><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>Semon
+Belinda
+Perch</code></pre><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include<bits/stdc++.h>
+
+int main() {
+    int cases, a, b, c, d, e;
+    double x, y, z;
+    scanf("%d", &cases);
+    while(cases--) {
+        scanf("%d", &a);
+        scanf("%d", &b);
+        scanf("%d", &c);
+        scanf("%d", &d);
+        scanf("%d", &e);
+        x = a * a;
+        y = b * c;
+        z = 0.5 * d * e;
+        if(x > y && x > z)
+            printf("Perch\n");
+        else if (y > x && y > z)
+            printf("Semon\n");
+        else
+            printf("Belinda\n");
+
     }
-}</code></pre><h3 id="jsonp实现跨域请求"><a href="#jsonp实现跨域请求" class="headerlink" title="jsonp实现跨域请求"></a>jsonp实现跨域请求</h3><p>基本原理： 主要就是利用了 <code>script</code> 标签的<code>src</code>没有跨域限制来完成的。</p>
-<p>执行过程：</p>
-<ul>
-<li>前端定义一个解析函数(如: <code>getJson = function (res) {}</code>)</li>
-<li>通过<code>params</code>的形式包装<code>script</code>标签的请求参数，并且声明执行函数(如<code>cb=jsonpCallback</code>)</li>
-<li>后端获取到前端声明的执行函数(<code>getJson</code>)，并以带上参数且调用执行函数的方式传递给前端</li>
-<li>前端在<code>script</code>标签返回资源的时候就会去执行<code>getJson</code>并通过回调函数的方式拿到数据了。</li>
-</ul>
-<p>缺点是只能进行<code>GET</code>请求。</p>
-<p><strong>实现代码</strong></p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-    <span class="token comment" spellcheck="true">// 定义函数</span>
-    <span class="token keyword">function</span> <span class="token function">getJson</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// data 就是要取的json数据</span>
-        <span class="token keyword">let</span> myData <span class="token operator">=</span> data<span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myData<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-B"><a href="#Problem-B" class="headerlink" title="Problem B"></a>Problem B</h2><h3 id="Problem-Description-1"><a href="#Problem-Description-1" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>说到排序，我们都知道这是编程人员必备的知识，更不用说信奥了。</p>
+<p>朱逸天，丁爸编程培训班的首期学员，尽管0基础开始，但是进步很大，已经熟练掌握了各种排序的实现。</p>
+<p>现在，朱逸天专门准备了这么一个题目，想测试一下同班同学的你，看看你是否也熟练掌握了排序。</p>
+<p>假设丁爸信奥培训班共有N（N&lt;100）名同学，已知各位同学的详细信息（姓名，年龄，分数），现在请对培训班的全体同学做一个排序。</p>
+<p>排序的规则要求如下：<br>1、首先按照分数从高到低进行排序；<br>2、如果分数相同，则年龄小的排名靠前；<br>3、如果依然不能区分，再按照姓名的字典序排列；</p>
+<p>考验你的时候到了，你是否能像朱逸天一样熟练掌握排序呢？</p>
+<h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h3><p>输入包含多组测试用例；</p>
+<p>每组数据首先是一个正整数N，表示培训班有N位同学，每位同学的信息占一行，依次是姓名Name、年龄Age和分数Score。</p>
+<p>其中，姓名Name是长度不超过10的无空格字符串，年龄Age是不大于20的正整数，分数Score是不超过100的浮点数。</p>
+<h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h3><p>请输出排序后的全班同学信息，其中，分数保留2位小数。<br>格式参见样例。</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>6
+jaa 18 99.5
+bbb 19 100
+kcc 19 99
+tdd 20 100
+abc 18 100
+see 19 100</code></pre><h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>abc 18 100.00
+bbb 19 100.00
+see 19 100.00
+tdd 20 100.00
+jaa 18 99.50
+kcc 19 99.00</code></pre><h3 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+#include<algorithm>
+#include<stdio.h>
+#include<string.h>
+#define LL long long
+#define exp 1e-9
+#define MAXN 1000010
 
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"./stock_data.json?callback=getJson"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>同时我们还要改变Python存储数据的格式，要在json数据外面套上一个函数才能执行。因为script标签会默认引用的是一个脚本文件，如果里面只有json数据浏览器就解析不了，所以要套上一个函数。</p>
-<pre class="line-numbers language-Python"><code class="language-Python">def func_json(function_name, dataframe, filename):
-    cancatString = string + '(' + dataframe.to_json() + ')'
-    f = open(filename, 'w') 
-    f.write(cancatString)
-    f.close()
-func_json('getJson', df , 'stock_data.json')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我们看看此时的Json文件</p>
-<pre><code>getJson({&quot;ts_code&quot;:{&quot;0&quot;:&quot;000001.SH&quot;,&quot;1&quot;:&quot;000300.SH&quot;,&quot;2&quot;:&quot;000905.SH&quot;,&quot;3&quot;:&quot;399001.SZ&quot;,&quot;4&quot;:&quot;399005.SZ&quot;,&quot;5&quot;:&quot;399006.SZ&quot;,&quot;6&quot;:&quot;399016.SZ&quot;,&quot;7&quot;:&quot;399300.SZ&quot;,&quot;8&quot;:&quot;000005.SH&quot;,&quot;9&quot;:&quot;000006.SH&quot;,&quot;10&quot;:&quot;000016.SH&quot;,&quot;11&quot;:&quot;399905.SZ&quot;},&quot;trade_date&quot;:{&quot;0&quot;:&quot;20181018&quot;,&quot;1&quot;:&quot;20181018&quot;,&quot;2&quot;:&quot;20181018&quot;,&quot;3&quot;:&quot;20181018&quot;,&quot;4&quot;:&quot;20181018&quot;,&quot;5&quot;:&quot;20181018&quot;,&quot;6&quot;:&quot;20181018&quot;,&quot;7&quot;:&quot;20181018&quot;,&quot;8&quot;:&quot;20181018&quot;,&quot;9&quot;:&quot;20181018&quot;,&quot;10&quot;:&quot;20181018&quot;,&quot;11&quot;:&quot;20181018&quot;},&quot;total_mv&quot;:{&quot;0&quot;:31699180114564.0,&quot;1&quot;:29449418462967.0,&quot;2&quot;:5687430983317.0,&quot;3&quot;:10179054112565.0,&quot;4&quot;:3085045567981.0,&quot;5&quot;:1693944514908.0,&quot;6&quot;:2185432734692.0,&quot;7&quot;:29449418462967.0,&quot;8&quot;:1295146513074.0,&quot;9&quot;:589008238469.0,&quot;10&quot;:16101657858757.0,&quot;11&quot;:5687430983317.0},&quot;float_mv&quot;:{&quot;0&quot;:22966231985204.0,&quot;1&quot;:21842573432592.0,&quot;2&quot;:4465633892148.0,&quot;3&quot;:7705370463348.0,&quot;4&quot;:2228893363286.0,&quot;5&quot;:1083815980254.0,&quot;6&quot;:1703092728155.0,&quot;7&quot;:21842573432592.0,&quot;8&quot;:618617244719.0,&quot;9&quot;:509355526925.0,&quot;10&quot;:12779078542269.0,&quot;11&quot;:4465633892148.0},&quot;total_share&quot;:{&quot;0&quot;:4442798161247.0,&quot;1&quot;:3691970608877.0,&quot;2&quot;:881140150403.0,&quot;3&quot;:1088737425967.0,&quot;4&quot;:244211463062.0,&quot;5&quot;:128802865087.0,&quot;6&quot;:174493828078.0,&quot;7&quot;:3691970608877.0,&quot;8&quot;:168601053467.0,&quot;9&quot;:91344316299.0,&quot;10&quot;:2046429718322.0,&quot;11&quot;:881140150403.0},&quot;float_share&quot;:{&quot;0&quot;:3289875967605.0,&quot;1&quot;:2703135408430.0,&quot;2&quot;:724932684320.0,&quot;3&quot;:845773870058.0,&quot;4&quot;:179801475990.0,&quot;5&quot;:93587976448.0,&quot;6&quot;:140943430195.0,&quot;7&quot;:2703135408430.0,&quot;8&quot;:87261145444.0,&quot;9&quot;:80701448890.0,&quot;10&quot;:1608871537660.0,&quot;11&quot;:724932684320.0},&quot;free_share&quot;:{&quot;0&quot;:1243989478731.0,&quot;1&quot;:928883774793.0,&quot;2&quot;:415536426546.0,&quot;3&quot;:509473831228.0,&quot;4&quot;:110333344951.0,&quot;5&quot;:69877922054.0,&quot;6&quot;:95872144544.0,&quot;7&quot;:928883774793.0,&quot;8&quot;:60194793605.0,&quot;9&quot;:32822641439.0,&quot;10&quot;:377997983573.0,&quot;11&quot;:415536426546.0},&quot;turnover_rate&quot;:{&quot;0&quot;:0.38,&quot;1&quot;:0.27,&quot;2&quot;:0.82,&quot;3&quot;:0.88,&quot;4&quot;:0.85,&quot;5&quot;:1.5,&quot;6&quot;:1.06,&quot;7&quot;:0.27,&quot;8&quot;:0.76,&quot;9&quot;:0.46,&quot;10&quot;:0.14,&quot;11&quot;:0.82},&quot;turnover_rate_f&quot;:{&quot;0&quot;:1.01,&quot;1&quot;:0.79,&quot;2&quot;:1.44,&quot;3&quot;:1.46,&quot;4&quot;:1.39,&quot;5&quot;:2.01,&quot;6&quot;:1.56,&quot;7&quot;:0.79,&quot;8&quot;:1.1,&quot;9&quot;:1.14,&quot;10&quot;:0.6,&quot;11&quot;:1.44},&quot;pe&quot;:{&quot;0&quot;:11.92,&quot;1&quot;:11.17,&quot;2&quot;:18.03,&quot;3&quot;:17.48,&quot;4&quot;:21.43,&quot;5&quot;:29.56,&quot;6&quot;:18.86,&quot;7&quot;:11.17,&quot;8&quot;:12.74,&quot;9&quot;:7.65,&quot;10&quot;:10.01,&quot;11&quot;:18.03},&quot;pe_ttm&quot;:{&quot;0&quot;:11.13,&quot;1&quot;:10.47,&quot;2&quot;:16.65,&quot;3&quot;:16.16,&quot;4&quot;:19.55,&quot;5&quot;:27.04,&quot;6&quot;:17.93,&quot;7&quot;:10.47,&quot;8&quot;:12.58,&quot;9&quot;:7.09,&quot;10&quot;:9.33,&quot;11&quot;:16.65},&quot;pb&quot;:{&quot;0&quot;:1.28,&quot;1&quot;:1.3,&quot;2&quot;:1.51,&quot;3&quot;:1.93,&quot;4&quot;:2.73,&quot;5&quot;:3.2,&quot;6&quot;:2.72,&quot;7&quot;:1.3,&quot;8&quot;:1.19,&quot;9&quot;:1.13,&quot;10&quot;:1.17,&quot;11&quot;:1.51}})</code></pre><p>可以看到已经套上函数了。</p>
-<p><strong>查看结果</strong></p>
-<p><img src="/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian/success.png" alt></p>
-<p>可以看到成功请求数据了。</p>
-<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><p><strong>Python代码</strong></p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> tushare <span class="token keyword">as</span> ts
+using namespace std;
 
-<span class="token keyword">def</span> <span class="token function">func_json</span><span class="token punctuation">(</span>function_name<span class="token punctuation">,</span> dataframe<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    cancatString <span class="token operator">=</span> function_name <span class="token operator">+</span> <span class="token string">'('</span> <span class="token operator">+</span> dataframe<span class="token punctuation">.</span>to_json<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">')'</span>
-    f <span class="token operator">=</span> open<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> 
-    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>cancatString<span class="token punctuation">)</span>
-    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+struct node{
+    char name[101];
+    int age;
+    float grade;
+}stu[1003];
 
-token<span class="token operator">=</span><span class="token string">'15e164e74f082e80c989dfb93b1d937ee95b83ea78b2c5bf1d5db211'</span>
-pro<span class="token operator">=</span>ts<span class="token punctuation">.</span>pro_api<span class="token punctuation">(</span>token<span class="token punctuation">)</span>
-df <span class="token operator">=</span> pro<span class="token punctuation">.</span>index_dailybasic<span class="token punctuation">(</span>trade_date<span class="token operator">=</span><span class="token string">'20181018'</span><span class="token punctuation">)</span>
-func_json<span class="token punctuation">(</span><span class="token string">'getJson'</span><span class="token punctuation">,</span> df <span class="token punctuation">,</span> <span class="token string">'stock_data.json'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>html代码</strong></p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+bool cmp(node a,node b)
+{
+    if(a.grade != b.grade)
+        return a.grade > b.grade;
+    else {
+        if(a.age != b.age)
+            return a.age < b.age;
+        else
+            return strcmp(a.name,b.name) < 0;
+    }
+}
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+int main()
+{
+    int N,i;
+    while(scanf("%d",&N)!=EOF)
+    {
+        for(i=0;i<N;i++)
+        {
+            scanf("%s %d %f",&stu[i].name,&stu[i].age,&stu[i].grade);
+        }
+        sort(stu,stu+N,cmp);
+        for(i=0;i<N;i++)
+        {
+            printf("%s %d %.2f\n",stu[i].name,stu[i].age,stu[i].grade);
+        }
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-C"><a href="#Problem-C" class="headerlink" title="Problem C"></a>Problem C</h2><h3 id="Problem-Description-2"><a href="#Problem-Description-2" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>一丁小朋友最近迷上了密码，并且认为自己设计了一套“高级密码”。</p>
+<p>当然，因为他实在太小了，他所谓的“高级密码”其实非常简单：<br>只要把字符倒序输出就能解密了~</p>
+<h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h3><p>输入首先包括一个正整数N，表示有N组测试用例。<br>每组数据占一行，包含一个长度不超过50的字符串。</p>
+<h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h3><p>请输出解密后的字符串，每组数据占一行。</p>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2
+!uiLoaL ,olleH
+!iahneW rof gnithgiF</code></pre><h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>Hello, LaoLiu!
+Fighting for Wenhai!</code></pre><h3 id="code-2"><a href="#code-2" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+#include<stdlib.h>
+#include<string.h>
+using namespace std; 
+int main() {
+    int n,i,j;
+    char ch1[55],ch2[55];
+    scanf("%d",&n);
+    //如果不加这一句，那么会将输入n后的回车当成ch1
+    getchar();
+    while(n--)
+    {
+        gets(ch1);
+        for(i=0;ch1[i]!='\0';i++);
+        i--;
+        for(j=0;i!=-1;j++,i--)
+        {
+            ch2[j] = ch1[i];
+        }
+        ch2[j] = '\0';
+        puts(ch2);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-D"><a href="#Problem-D" class="headerlink" title="Problem D"></a>Problem D</h2><h3 id="Problem-Description-3"><a href="#Problem-Description-3" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>给出两个已化为最简的分数 a/b , c/d ，请编程计算并输出这两个分数的乘积化简后的结果 e/f，题目保证所有的数均是1000范围内的正整数。</p>
+<h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input"></a>Input</h3><p>数据的第一行是一个正整数C，表示一共有C组测试用例。</p>
+<p>接下来有C行数据，每行有四个正整数 a b c d。</p>
+<h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output"></a>Output</h3><p>输出这两个分数的乘积化简后的结果，分子为e，分母为f，中间用空格隔开，每个测试用例占一行。</p>
+<h3 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2
+1 2 2 3
+1 2 1 2</code></pre><h3 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>1 3
+1 4</code></pre><h3 id="code-3"><a href="#code-3" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include<bits/stdc++.h>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+int main() {
+    int cases, a, b, c, d;
+    int x, y;
+    scanf("%d", &cases);
+    while(cases--) {
+        scanf("%d %d %d %d", &a, &b, &c, &d);
+        x = a * c;
+        y = b * d;
+        for(int i=x;i>=1;i--) {
+            if((x % i == 0) && (y%i == 0)) {
+                x = x/i;
+                y = y/i;
+            }
+        }
+        printf("%d %d\n", x, y);
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-E"><a href="#Problem-E" class="headerlink" title="Problem E"></a>Problem E</h2><h3 id="Problem-Description-4"><a href="#Problem-Description-4" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>为情所困退学在家的钱哥毅然决定养猪！</p>
+<p>在2010年1月1日，他买了一只刚出生的母猪幼仔，假设每只小母猪从第3个年头开始，每年的第一天都会生出4只小母猪，同时，钱哥会在每年的12月31日售出所有差一天就要年满5周岁的猪。</p>
+<p>请计算：在第N年（2010年是第1年，2011是第2年，依次类推）的今天（5月4日），钱哥的养猪场会存栏多少只猪?</p>
+<h3 id="Input-4"><a href="#Input-4" class="headerlink" title="Input"></a>Input</h3><p>输入数据第一行是一个整数T(0&lt;T&lt;=40)，表示测试数据的组数.<br>接下来有T行，每行有一个数N(0&lt;N&lt;=40)表示一组测试数据，其含义如题目描述。</p>
+<h3 id="Output-4"><a href="#Output-4" class="headerlink" title="Output"></a>Output</h3><p>对于每个测试实例，请输出在第N年的今天母猪的数量，每组数据的输出占一行。</p>
+<h3 id="Sample-Input-4"><a href="#Sample-Input-4" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>3
+2
+3
+5</code></pre><h3 id="Sample-Output-4"><a href="#Sample-Output-4" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>1
+5
+29</code></pre><h3 id="code-4"><a href="#code-4" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include <bits/stdc++.h>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
-    <span class="token comment" spellcheck="true">// 定义函数</span>
-    <span class="token keyword">function</span> <span class="token function">getJson</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// data 就是要取的json数据</span>
-        <span class="token keyword">let</span> myData <span class="token operator">=</span> data<span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myData<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+using namespace std;
+typedef long long ll;
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./stock_data.json?callback<span class="token punctuation">=</span>getJson<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+const int maxn = 45;
+int dp[maxn], ans[maxn];
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+int main(int argc, char **argv) {
+    fill(dp, dp + maxn, 0);
+    fill(ans, ans + maxn, 0);
+    dp[1] = 1;
+    dp[2] = 0;
+    dp[3] = 4;
+    dp[4] = 4;
+    dp[5] = 20;
+    ans[1] = 1;
+    ans[2] = 1;
+    ans[3] = 5, ans[4] = 9, ans[5] = 29;
+    for (int i = 6; i <= 40; i++) {
+        // 母猪在五岁前一天售出，只有3岁以上的母猪可以生出小母猪
+        for (int j = i - 4; j <= i - 2; j++) {
+            dp[i] += dp[j] * 4;
+        }
+        // 加上小猪，减去已出售的母猪
+        ans[i] = ans[i - 1] + dp[i] - dp[i - 5];
+    }
+    int T, n;
+    while (~scanf("%d", &T)) {
+        while (T--) {
+            scanf("%d", &n);
+            printf("%d\n", ans[n]);
+        }
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-F"><a href="#Problem-F" class="headerlink" title="Problem F"></a>Problem F</h2><h3 id="Problem-Description-5"><a href="#Problem-Description-5" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>一个数，如果他的素数因子只包括2,3,5,7，则称这个数为萌数，比如，下面这些数就是前20个萌数：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 24, 25, 27。</p>
+<p>现在给你一个萌数，请编程计算它的约数的个数。<br>比如，4是一个萌数，他有3个约数(1,2,4)；12也是一个萌数，他有 6 个约数（1,2,3,4,6,12）。</p>
+<h3 id="Input-5"><a href="#Input-5" class="headerlink" title="Input"></a>Input</h3><p>输入包含多组测试用例。<br>每个测试用例包含一个萌数n, 并且n在64位整数的范围( long long 类型，输入输出用%lld )。<br>如果n为0，则标志结束输入，不做处理。</p>
+<h3 id="Output-5"><a href="#Output-5" class="headerlink" title="Output"></a>Output</h3><p>对于每个测试用例中的萌数，请输出他的约数的个数。<br>每个输出占一行。</p>
+<h3 id="Sample-Input-5"><a href="#Sample-Input-5" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>4
+12
+0</code></pre><h3 id="Sample-Output-5"><a href="#Sample-Output-5" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>3
+6</code></pre><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+
+typedef long long ll;
+using namespace std;
+ll n;
+
+int main() {
+    while (cin >> n) {
+        if (n == 0) break;
+        // 1一定是约数
+        ll a1 = 1, a2 = 1, a3 = 1, a4 = 1;
+        while (n % 2 == 0) {
+            a1++;
+            n /= 2;
+        }
+        while (n % 3 == 0) {
+            a2++;
+            n /= 3;
+        }
+        while (n % 5 == 0) {
+            a3++;
+            n /= 5;
+        }
+        while (n % 7 == 0) {
+            a4++;
+            n /= 7;
+        }
+        ll ans = a1 * a2 * a3 * a4;
+        cout << ans << endl;
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Problem-G"><a href="#Problem-G" class="headerlink" title="Problem G"></a>Problem G</h2><h3 id="Problem-Description-6"><a href="#Problem-Description-6" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>一丁三年级的时候学会了跳棋，但一直到现在都没能赢过丁爸（毕竟是棋王~）。</p>
+<p>刚好，一丁最近学会了bfs，就打算写一个小程序帮助自己打破零胜的记录。</p>
+<p>在一个n*m的矩形棋盘上，一丁想要走动的棋子的坐标是x1,y1,想要棋子到达的坐标是x2,y2。棋子只能往上下左右四个方向走，如果棋子某一方向上相邻的位置没有别的棋子，那就可以直接走一步到达相邻位置，并且走的次数加一，如果走的方向上相邻位置有别的棋子，那也可以直接跳过去，但是只能跳过一个棋子，也就是相当于往一个方向走了两步，并且走的次数还是加一，不过这种情况必须要保证棋子跳到的位置没有别的棋子。</p>
+<p>在已知棋盘信息和想要移动的棋子的起点坐标和终点坐标后，一丁希望输出最少走的次数，如果不能走到终点，则输出-1。</p>
+<h3 id="Input-6"><a href="#Input-6" class="headerlink" title="Input"></a>Input</h3><p>题目有多组输入。</p>
+<p>每组数据第一行是两个整数n（1&lt;=n&lt;=10）和m(1&lt;=m&lt;=10)，分别表示矩形棋盘的行数和列数。</p>
+<p>接下来一共有n行，每行m个字符。只包含‘.’和‘<em>’两种字符。其中，‘.’表示这个位置没有棋子，‘</em>’表示这个位置有棋子。</p>
+<p>最后还有一行包含四个正整数x1,y1,x2,y2,分别表示棋子起点的行列坐标和棋子最后想要到达的行列坐标。</p>
+<p>题目保证1&lt;=x1,x2&lt;=n, 1&lt;=y1,y2&lt;=m，并且（x1，y1）位置上肯定是‘*’，（x2,y2）上肯定是‘.’。</p>
+<h3 id="Output-6"><a href="#Output-6" class="headerlink" title="Output"></a>Output</h3><p>输出棋子从（x1,y1）到（x2,y2）的最小步数，如果不能到达则输出-1。</p>
+<h3 id="Sample-Input-6"><a href="#Sample-Input-6" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>3 3
+*..
+.*.
+...
+1 1 3 3
+
+3 3
+*.*
+..*
+**.
+1 1 3 3</code></pre><h3 id="Sample-Output-6"><a href="#Sample-Output-6" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>3
+-1</code></pre><pre class="line-numbers language-c++"><code class="language-c++">#include<bits/stdc++.h>
+
+using namespace std;
+char a[20][20];
+int d[20][20];
+// dx和dy组合起来对应上下左右四个方向
+int dx[4] = {1, -1, 0, 0};
+int dy[4] = {0, 0, -1, 1};
+
+int main() {
+    int n, m;
+    while (cin >> n >> m && n && m) {
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= m; j++)
+                cin >> a[i][j];
+        int sx, sy, ex, ey;
+        cin >> sx >> sy >> ex >> ey;
+
+        // void *memset(void *s, int c, unsigned long n);
+        // 将指针变量 s 所指向的前 n 字节的内存单元用一个“整数” c 替换，
+        // 注意 c 是 int 型。s 是 void* 型的指针变量，所以它可以为任何类型的数据进行初始化。
+        memset(d, -1, sizeof(d));
+        d[sx][sy] = 0;
+        // 队列结构，<x,y>组成一组坐标
+        queue <pair<int, int>> q;
+        q.push(make_pair(sx, sy));
+        // 当队列不为空时，进行BFS
+        while (q.size()) {
+            // 取出队列中的第一个元素x坐标和y坐标
+            int x = q.front().first, y = q.front().second;
+            q.pop();
+            // d[nx][ny] == -1用于判断该点是否被走过
+            for (int i = 0; i < 4; i++) {
+                int nx = x + dx[i], ny = y + dy[i];
+                // 棋子某一方向上相邻的位置没有别的棋子
+                if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && a[nx][ny] == '.' && d[nx][ny] == -1) {
+                    d[nx][ny] = d[x][y] + 1;
+                    q.push(make_pair(nx, ny));
+                } else if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && a[nx][ny] == '*' && d[nx][ny] == -1) {
+                    nx = nx + dx[i];
+                    ny = ny + dy[i];
+                    // 走的方向上相邻位置有别的棋子，并且棋子跳到的位置没有别的棋子，则跳过一个棋子
+                    if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && a[nx][ny] == '.' && d[nx][ny] == -1) {
+                        d[nx][ny] = d[x][y] + 1;
+                        q.push(make_pair(nx, ny));
+                    }
+                }
+            }
+        }
+        cout << d[ex][ey] << "\n";
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1234,9 +1258,9 @@ func_json<span class="token punctuation">(</span><span class="token string">'get
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《在file协议下读取本地json文件》
+                    《ACM-test-first》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/acm-test-first.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 Peter Pan
             </a> 采用
@@ -1538,65 +1562,37 @@ func_json<span class="token punctuation">(</span><span class="token string">'get
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/yong-vue-he-elementui-zhi-zuo-yi-ge-deng-lu-jie-mian.html">
+                <a href="/acm-test-first.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="用Vue和elementUI制作一个登录界面">
+                        <img src="/medias/featureimages/45.jpg" class="responsive-img" alt="ACM-test-first">
                         
-                        <span class="card-title">用Vue和elementUI制作一个登录界面</span>
+                        <span class="card-title">ACM-test-first</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用Vue和elementUI，通过组件化的方式制作一个登录界面
+                            Problem AProblem Description有一天，小猪佩奇去堂姐家玩，认识了两个新朋友，分别是松鼠西蒙和小熊贝琳达。佩奇和新朋友一起做蛋糕，佩奇做了一个正方形的蛋糕，西蒙做了一个长方形的蛋糕，贝琳达做了一个三角形的蛋糕。
+现在
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-26
+                            </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Vue/" class="post-category" target="_blank">
-                                    Vue
-                                </a>
-                            
-                            <a href="/categories/Vue/element-UI/" class="post-category" target="_blank">
-                                    element UI
-                                </a>
-                            
-                            <a href="/categories/Vue/element-UI/JavaScript/" class="post-category" target="_blank">
-                                    JavaScript
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/" target="_blank">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/Vue/" target="_blank">
-                        <span class="chip bg-color">Vue</span>
-                    </a>
-                    
-                    <a href="/tags/element-UI/" target="_blank">
-                        <span class="chip bg-color">element UI</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1607,33 +1603,26 @@ func_json<span class="token punctuation">(</span><span class="token string">'get
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/git-command-notes.html">
+                <a href="/web-exam.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="git常用命令和错误排除">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="web-exam">
                         
-                        <span class="card-title">git常用命令和错误排除</span>
+                        <span class="card-title">web-exam</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常见git命令总结与错误排除
+                            web前端考试
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-26
                             </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                    git
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -1641,8 +1630,8 @@ func_json<span class="token punctuation">(</span><span class="token string">'get
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/" target="_blank">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/web/" target="_blank">
+                        <span class="chip bg-color">web</span>
                     </a>
                     
                 </div>
