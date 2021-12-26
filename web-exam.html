@@ -1046,7 +1046,7 @@ username=admin&amp;password=admin
 {&quot;code&quot;:200,&quot;message&quot;:&quot;登录成功&quot;, &quot;token&quot;:******}
 &lt;html&gt;
   ......具体内容
-&lt;/html&gt;</code></pre><h3 id="登录功能是采用何种技术实现的？存在哪些缺点或不足？"><a href="#登录功能是采用何种技术实现的？存在哪些缺点或不足？" class="headerlink" title="登录功能是采用何种技术实现的？存在哪些缺点或不足？"></a><strong>登录功能是采用何种技术实现的？存在哪些缺点或不足？</strong></h3><p>登录操作一般都会放在一个表单控件上面。一般表单有登录名、密码，<form></form>、<input>，表单所有信息用<form></form>包裹。用<form>包裹所有<input>输入框，当点击提交后，将会把<form>所包裹得所有<input>输入框的信息提交给后台的一个地址上。在这之后可以向服务端发送POST或GET请求，并把账号密码做为参数传输给后端。</form></form></p>
+&lt;/html&gt;</code></pre><h3 id="登录功能是采用何种技术实现的？存在哪些缺点或不足？"><a href="#登录功能是采用何种技术实现的？存在哪些缺点或不足？" class="headerlink" title="登录功能是采用何种技术实现的？存在哪些缺点或不足？"></a><strong>登录功能是采用何种技术实现的？存在哪些缺点或不足？</strong></h3><p>登录操作一般都会放在一个表单控件上面。一般表单有登录名、密码，<code>&lt;form&gt;&lt;/form&gt;</code>、<code>&lt;input&gt;</code>，表单所有信息用<code>&lt;form&gt;&lt;/form&gt;</code>包裹。用<code>&lt;form&gt;</code>包裹所有<code>&lt;input&gt;</code>输入框，当点击提交后，将会把<code>&lt;form&gt;</code>所包裹得所有<code>&lt;input&gt;</code>输入框的信息提交给后台的一个地址上。在这之后可以向服务端发送POST或GET请求，并把账号密码做为参数传输给后端。</p>
 <p>但是不管是使用cookie还是session，使用token登录安全性更强。</p>
 <p>登录后根据security的安全算法生成一个唯一的token值（基于JWT），然后存储到redis中，并设定过期时间，之后把token值返回前台，前台保存到localStorage中，然后每次访问的时候都需要提交token作为验证，验证通过则可以访问接口。</p>
 <p><strong>使用token登录的好处</strong></p>
