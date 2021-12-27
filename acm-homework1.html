@@ -4,19 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="git常用命令和错误排除, 被动学习">
+    <meta name="keywords" content="ACM-homework1, 被动学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="git上传文件首先这是我的目录结构
-├─css
-├─font
-├─img
-├─js
-└─stockData
-    ├─general_picture
-    │  ├─index_dailybasic
-    │  └─SZ_daily_">
+    <meta name="description" content="Brave GameProblem Description十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。今天，大家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>git常用命令和错误排除 | Peter Pan的后花园</title>
+    <title>ACM-homework1 | Peter Pan的后花园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -625,13 +617,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        git常用命令和错误排除
+                        ACM-homework1
                     </div>
                 </div>
             </div>
@@ -741,24 +733,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/git/" class="post-category" target="_blank">
-                            git
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -766,7 +745,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-17
+                    2021-12-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -780,14 +759,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    627
+                    516
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
                 
@@ -803,79 +782,237 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="git上传文件"><a href="#git上传文件" class="headerlink" title="git上传文件"></a>git上传文件</h3><p>首先这是我的目录结构</p>
-<pre><code>├─css
-├─font
-├─img
-├─js
-└─stockData
-    ├─general_picture
-    │  ├─index_dailybasic
-    │  └─SZ_daily_info
-    ├─HS300
-    ├─motion_index
-    ├─SSE
-    │  ├─bond_summary_sse_df
-    │  ├─stock_sse_deal_daily
-    │  └─stock_sse_deal_daily_df
-    └─SZZS</code></pre><p>很明显，stockData是一个大文件。</p>
-<p>首先需要安装lfs，因为github不允许上传过大的文件，这个模块可以让我们上传大文件。</p>
-<pre><code>git lfs install</code></pre><p>追踪所有文件</p>
-<pre><code>git lfs track *</code></pre><pre><code>$ git lfs track *
-Tracking &quot;README.md&quot;
-&quot;css&quot; already supported
-&quot;font&quot; already supported
-&quot;img&quot; already supported
-&quot;index.html&quot; already supported
-&quot;js&quot; already supported
-Tracking &quot;stockData&quot;</code></pre><p>可以看到追踪到了stockData，但是我想要上传所有的文件，所有需要添加文件</p>
-<pre><code>git add css
-git add font
-git add img
-git add index.html
-git add js</code></pre><p>最后push到github上面</p>
-<pre><code>git push origin master</code></pre><pre><code>Uploading LFS objects: 100% (2/2), 3.3 KB | 0 B/s, done.
-Enumerating objects: 390, done.
-Counting objects: 100% (390/390), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (387/387), done.
-Writing objects: 100% (388/388), 1.02 MiB | 1015.00 KiB/s, done.
-Total 388 (delta 110), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (110/110), done.
-To https://github.com/lovestories0eng/wecFinancial.git
-   3e16a3b..671156c  master -&gt; master
-(base) PS E:\JetBrains\bond\dist&gt; git lfs track *
-Tracking &quot;*&quot;
-Pattern * matches forbidden file .gitattributes. If you would like to track .gitattributes, modify .gitattributes manually.</code></pre><p><img src="/git-command-notes/success.png" alt></p>
-<p>成功</p>
-<h3 id="git-clone错误"><a href="#git-clone错误" class="headerlink" title="git clone错误"></a>git clone错误</h3><h4 id="SSL证书错误"><a href="#SSL证书错误" class="headerlink" title="SSL证书错误"></a>SSL证书错误</h4><pre><code>git clone https://github.com/maclxf/supermall.git</code></pre><p>报错：</p>
-<pre><code>Cloning into &#39;supermall&#39;...
-fatal: unable to access &#39;https://github.com/maclxf/supermall.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054</code></pre><p>这是服务器的SSL证书，没有经过第三方签名，所以报错。</p>
-<p>如果是由网络不稳定和连接超时引起的。再次尝试的话，您仍然会报告一个错误。</p>
-<p>解决方式如下：</p>
-<pre><code>git config --global http.sslVerify &quot;false&quot;
-git init</code></pre><p>会看到如下结果</p>
-<pre><code>Initialized empty Git repository in D:/Users/HP/Desktop/Projects/.git/</code></pre><p>重新clone</p>
-<pre><code>git clone https://github.com/maclxf/supermall.git</code></pre><p>成功！</p>
-<pre><code>Cloning into &#39;supermall&#39;...
-remote: Enumerating objects: 200, done.
-remote: Counting objects: 100% (200/200), done.
-remote: Compressing objects: 100% (152/152), done.
-Receiving objects:  88% (176/200)ote: Total 200 (delta 68), reused 139 (delta 27), pack-reused 0
-Receiving objects: 100% (200/200), 198.04 KiB | 594.00 KiB/s, done.
-Resolving deltas: 100% (68/68), done.</code></pre><h4 id="Time-Out"><a href="#Time-Out" class="headerlink" title="Time Out"></a>Time Out</h4><pre><code>git clone https://github.com/1977474741/vue-waterfall-rapid.git</code></pre><p>报错:</p>
-<pre><code>Cloning into &#39;vue-waterfall-rapid&#39;...
-fatal: unable to access &#39;https://github.com/1977474741/vue-waterfall-rapid.git/&#39;: Failed to connect to github.com port 443: Timed out</code></pre><p>解决方式：找到C:\Windows\System32\drivers\etc\hosts文件，把与github有关的行注释掉即可。</p>
-<p><img src="/git-command-notes/1.png" alt></p>
-<p><img src="/git-command-notes/2.png" alt></p>
-<p>取消代理设置</p>
-<pre><code>git config --global --unset http.proxy</code></pre><p>再进行clone</p>
-<pre><code>git clone https://github.com/itagn/vue-iresume.git</code></pre><pre><code>Cloning into &#39;vue-iresume&#39;...
-remote: Enumerating objects: 455, done.
-remote: Total 455 (delta 0), reused 0 (delta 0), pack-reused 455
-Receiving objects: 100% (455/455), 367.11 KiB | 402.00 KiB/s, done.
-Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
+                <h2 id="Brave-Game"><a href="#Brave-Game" class="headerlink" title="Brave Game"></a>Brave Game</h2><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。<br>今天，大家选择上机考试，就是一种勇敢（brave）的选择；这个短学期，我们讲的是博弈（game）专题；所以，大家现在玩的也是“勇敢者的游戏”，这也是我命名这个题目的原因。<br>当然，除了“勇敢”，我还希望看到“诚信”，无论考试成绩如何，希望看到的都是一个真实的结果，我也相信大家一定能做到的~</p>
+<p>各位勇敢者要玩的第一个游戏是什么呢？很简单，它是这样定义的：<br>1、 本游戏是一个二人游戏;<br>2、 有一堆石子一共有n个；<br>3、 两人轮流进行;<br>4、 每走一步可以取走1…m个石子；<br>5、 最先取光石子的一方为胜；</p>
+<p>如果游戏的双方使用的都是最优策略，请输出哪个人能赢。</p>
+<p>input</p>
+<p>输入数据首先包含一个正整数C(C&lt;=100)，表示有C组测试数据。<br>每组测试数据占一行，包含两个整数n和m（1&lt;=n,m&lt;=1000），n和m的含义见题目描述。</p>
+<p>output</p>
+<p>如果先走的人能赢，请输出“first”，否则请输出“second”，每个实例的输出占一行。</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2
+23 2
+4 3</code></pre><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>first
+second</code></pre><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+using namespace std;
 
+// 典型的巴什博奕，要讨论n和m的关系，
+// 显然，如果有小于m个，那先取者获胜；
+// 如果有m+1个，后取者总能获胜。
+// 所以某玩家只要当前形势是m+1个，或者m+1个的倍数，那么后者最后肯定能获胜
+// 即，n = (m+1)*r + s，那么取s个就好了。
+// 简单来说就是最后一手给自己留下<=m个。
+int main()
+{
+    int n, a, b;
+    cin >> n;
+    while (n--)
+    {
+        cin >> a >> b;
+        if (a % (b + 1) == 0)
+            cout << "second\n";
+        else
+            cout << "first\n";
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Good-Luck-in-CET-4-Everybody"><a href="#Good-Luck-in-CET-4-Everybody" class="headerlink" title="Good Luck in CET-4 Everybody!"></a>Good Luck in CET-4 Everybody!</h2><h3 id="Problem-Description-1"><a href="#Problem-Description-1" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>大学英语四级考试就要来临了，你是不是在紧张的复习？也许紧张得连短学期的ACM都没工夫练习了，反正我知道的Kiki和Cici都是如此。当然，作为在考场浸润了十几载的当代大学生，Kiki和Cici更懂得考前的放松，所谓“张弛有道”就是这个意思。这不，Kiki和Cici在每天晚上休息之前都要玩一会儿扑克牌以放松神经。<br>“升级”？“双扣”？“红五”？还是“斗地主”？<br>当然都不是！那多俗啊~<br>作为计算机学院的学生，Kiki和Cici打牌的时候可没忘记专业，她们打牌的规则是这样的：<br>1、 总共n张牌;<br>2、 双方轮流抓牌；<br>3、 每人每次抓牌的个数只能是2的幂次（即：1，2，4，8，16…）<br>4、 抓完牌，胜负结果也出来了：最后抓完牌的人为胜者；<br>假设Kiki和Cici都是足够聪明（其实不用假设，哪有不聪明的学生~），并且每次都是Kiki先抓牌，请问谁能赢呢？<br>当然，打牌无论谁赢都问题不大，重要的是马上到来的CET-4能有好的状态。</p>
+<p>Good luck in CET-4 everybody!</p>
+<p>Input</p>
+<p>输入数据包含多个测试用例，每个测试用例占一行，包含一个整数n（1&lt;=n&lt;=1000）。</p>
+<p>Output</p>
+<p>如果Kiki能赢的话，请输出“Kiki”，否则请输出“Cici”，每个实例的输出占一行。</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>1
+3</code></pre><h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>Kiki
+Cici</code></pre><h3 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h3><p>很明显这道题目的原型还是巴什博弈，很多时候如果想不出解法，就可以换个角度，考虑巴什博弈的（n+1）k (k=0，1，2，3……)奇异局是怎么来的， 我们可以把问题规模变小，找到那个临界点（n+1），那么这道题目也就迎刃而解了，而这道题目的奇异局就在3k（k=0，1，2，3……）处，我们假设只剩下3张牌，先手只能摸1或者2张，剩下的牌后手都可以抓完，而如果是3的倍数，那么剩下的一定是3k+1或3k+2张牌，又可以构造出3k的奇异局，所以处于3k（k=0，1，2，3……）的奇异局中，先手必败。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+#include <cstdio>
+using namespace std;
+typedef long long ll;
+int main()
+{
+    int n;
+    while (cin >> n)
+    {
+        if (n % 3 == 0)
+            cout << "Cici" << endl;
+        else
+            cout << "Kiki" << endl;
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Fibonacci-again-and-again"><a href="#Fibonacci-again-and-again" class="headerlink" title="Fibonacci again and again"></a>Fibonacci again and again</h2><h3 id="Problem-Description-2"><a href="#Problem-Description-2" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>任何一个大学生对菲波那契数列(Fibonacci numbers)应该都不会陌生，它是这样定义的：<br>F(1)=1;<br>F(2)=2;<br>F(n)=F(n-1)+F(n-2)(n&gt;=3);<br>所以，1,2,3,5,8,13……就是菲波那契数列。<br>在HDOJ上有不少相关的题目，比如1005 Fibonacci again就是曾经的浙江省赛题。<br>今天，又一个关于Fibonacci的题目出现了，它是一个小游戏，定义如下：<br>1、 这是一个二人游戏;<br>2、 一共有3堆石子，数量分别是m, n, p个；<br>3、 两人轮流走;<br>4、 每走一步可以选择任意一堆石子，然后取走f个；<br>5、 f只能是菲波那契数列中的元素（即每次只能取1，2，3，5，8…等数量）；<br>6、 最先取光所有石子的人为胜者；</p>
+<p>假设双方都使用最优策略，请判断先手的人会赢还是后手的人会赢。</p>
+<p>Input</p>
+<p>输入数据包含多个测试用例，每个测试用例占一行，包含3个整数m,n,p（1&lt;=m,n,p&lt;=1000）。 m=n=p=0则表示输入结束。</p>
+<p>Output</p>
+<p>如果先手的人能赢，请输出“Fibo”，否则请输出“Nacci”，每个实例的输出占一行。</p>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>1 1 1
+1 4 1
+0 0 0</code></pre><h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>Fibo
+Nacci</code></pre><h3 id="code-2"><a href="#code-2" class="headerlink" title="code"></a>code</h3><p>首先定义mex(minimal excludant)运算，这是施加于一个集合的运算。表示最小的不属于这个集合的非负整数。</p>
+<p>必胜点和必败点的概念<br>必败点(P点) 前一个(previous player)选手将取胜的点称为必败点<br>必胜点(N点) 下一个(next player)选手将取胜的点称为必胜点<br>比如现在数字已经为18了，那么当前操作人只要给数字+3则必胜，我们就把在此位置称为必胜点。<br>必胜点和必败点的性质：</p>
+<ul>
+<li>所有的终结点都是必败点</li>
+<li>从任何必胜点操作，至少有一种方式进入必败点</li>
+<li>无论如何操作， 从必败点都只能进入必胜点.</li>
+</ul>
+<p>Sprague-Grundy(SG)定理<br>游戏和的SG函数等于各个游戏SG函数的Nim和。这样就可以将每一个子游戏分而治之，从而简化了问题。而Bouton定理就是Sprague-Grundy定理在Nim游戏中的直接应用，因为单堆的Nim游戏 SG函数满足 SG(x) = x。</p>
+<p>比如mex{0,1,2,4}=3、mex{2,3,5}=0、mex{}=0。</p>
+<p>对于一个给定的有向无环图，定义关于图的每一个顶点的<strong>Sprague-Grundy</strong>函数g例如以下：g(x)=mex{ g(y) | y是x的后继 },这里的g（x）即sg[x]</p>
+<p>比如：取石子问题，有1堆n个的石子。每次仅仅能取{1,3,4}个石子，先取完石子者胜利，那么各个数的SG值为多少？</p>
+<p>sg[0]=0，f[]={1,3,4}.</p>
+<p>x=1时，能够取走1-f{1}个石子，剩余{0}个，mex{sg[0]}={0}，故sg[1]=1;</p>
+<p>x=2时，能够取走2-f{1}个石子，剩余{1}个，mex{sg[1]}={1}，故sg[2]=0；</p>
+<p>x=3时，能够取走3-f{1,3}个石子，剩余{2,0}个，mex{sg[2],sg[0]}={0,0}，故sg[3]=1;</p>
+<p>x=4时，能够取走4-f{1,3,4}个石子。剩余{3,1,0}个，mex{sg[3],sg[1],sg[0]}={1,1,0},故sg[4]=2;</p>
+<p>x=5时。能够取走5-f{1,3,4}个石子。剩余{4,2,1}个，mex{sg[4],sg[2],sg[1]}={2,0,1},故sg[5]=3；</p>
+<p>以此类推…..</p>
+<p>  x     0  1  2  3  4  5  6  7  8….</p>
+<p>sg[x]    0  1  0  1  2  3  2  0  1…</p>
+<p><strong>算法：</strong></p>
+<p>由上述实例我们就可以得到SG函数值求解步骤，那么计算1~n的SG函数值步骤如下：</p>
+<p>1、使用数组$f$将 可改变当前状态的方式记录下来。</p>
+<p>2、然后我们使用另一个数组将当前状态x 的后继状态标记。</p>
+<p>3、最后模拟mex运算，也就是我们在标记值中搜索未被标记值的最小值，将其赋值给SG(x)。</p>
+<p>4、我们不断的重复2-3的步骤，就完成了 计算1~n 的函数值。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <stdio.h>
+#include <string.h>
+int fib[21];    // fib保存Fibonacci数列
+int sg[1001];   // sg[]来保存SG值
+bool mex[1001]; // mex{}
+// 构建SG数组，函数各步骤意义详见上面模板
+void get_sg(int n)
+{
+    int i, j;
+    memset(sg, 0, sizeof(sg));
+    // 因为SG[0]始终等于0，所以i从1开始
+    for (i = 1; i <= n; i++)
+    {
+        // 每一次都要将上一状态的后继集合重置
+        memset(mex, 0, sizeof(mex));
+        // 对于属于g(x)后继的数置为1，这里的g(x)即sg[x]
+        for (j = 1; fib[j] <= i; j++)
+            // 对于状态i，的所有后继为i-f[j]，
+            // 在这些后继的sg值中取最小的没有出现的，求出所有的SG值。
+            // 标记当前点可以到达的状态
+            mex[sg[i - fib[j]]] = 1;
+        // 找到最小不属于该集合的数
+        for (j = 0; j <= n; j++)
+            if (!mex[j])
+                break;
+        sg[i] = j;
+    }
+}
+int main()
+{
+    int i, m, n, p;
+    // 构建Fibonacci数列
+    fib[0] = 1, fib[1] = 1;
+    for (i = 2; i < 21; ++i)
+        fib[i] = fib[i - 1] + fib[i - 2];
+    // 预处理获得sg数组
+    get_sg(1000);
+    while (scanf("%d%d%d", &m, &n, &p) && m + n + p)
+    {
+        // ^为异或运算符
+        if ((sg[m] ^ sg[n] ^ sg[p]) == 0)
+            printf("Nacci\n");
+        else
+            printf("Fibo\n");
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其实不难发现，Nim游戏就是一个很典型的用SG定理解决的问题，因为Nim游戏在一堆n个石子中可以取1-n个石子，所以单独这一堆石子的SG值为$mex(n−1,n−2,n − 3 , . . . ,n−n)=n$。根据SG定理，每一堆石子总数相互异或即为答案。</p>
+<h2 id="S-Nim"><a href="#S-Nim" class="headerlink" title="S-Nim"></a>S-Nim</h2><h3 id="Problem-Description-3"><a href="#Problem-Description-3" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Arthur and his sister Caroll have been playing a game called Nim for some time now. Nim is played as follows:<br> The starting position has a number of heaps, all containing some, not necessarily equal, number of beads.</p>
+<p> The players take turns chosing a heap and removing a positive number of beads from it.</p>
+<p> The first player not able to make a move, loses.<br>Arthur and Caroll really enjoyed playing this simple game until they recently learned an easy way to always be able to find the best move:<br> Xor the number of beads in the heaps in the current position (i.e. if we have 2, 4 and 7 the xor-sum will be 1 as 2 xor 4 xor 7 = 1).</p>
+<p> If the xor-sum is 0, too bad, you will lose.</p>
+<p> Otherwise, move such that the xor-sum becomes 0. This is always possible.<br>It is quite easy to convince oneself that this works. Consider these facts:</p>
+<p> The player that takes the last bead wins.</p>
+<p> After the winning player’s last move the xor-sum will be 0.</p>
+<p> The xor-sum will change after every move.<br>Which means that if you make sure that the xor-sum always is 0 when you have made your move, your opponent will never be able to win, and, thus, you will win.</p>
+<p>Understandibly it is no fun to play a game when both players know how to play perfectly (ignorance is bliss). Fourtunately, Arthur and Caroll soon came up with a similar game, S-Nim, that seemed to solve this problem. Each player is now only allowed to remove a number of beads in some predefined set S, e.g. if we have S =(2, 5) each player is only allowed to remove 2 or 5 beads. Now it is not always possible to make the xor-sum 0 and, thus, the strategy above is useless. Or is it?</p>
+<p>your job is to write a program that determines if a position of S-Nim is a losing or a winning position. A position is a winning position if there is at least one move to a losing position. A position is a losing position if there are no moves to a losing position. This means, as expected, that a position with no legal moves is a losing position.</p>
+<p>Input</p>
+<p>Input consists of a number of test cases. For each test case: The first line contains a number k (0 &lt; k ≤ 100 describing the size of S, followed by k numbers si (0 &lt; si ≤ 10000) describing S. The second line contains a number m (0 &lt; m ≤ 100) describing the number of positions to evaluate. The next m lines each contain a number l (0 &lt; l ≤ 100) describing the number of heaps and l numbers hi (0 ≤ hi ≤ 10000) describing the number of beads in the heaps. The last test case is followed by a 0 on a line of its own.</p>
+<p>Output</p>
+<p>For each position: If the described position is a winning position print a ‘W’.If the described position is a losing position print an ‘L’. Print a newline after each test case.</p>
+<h3 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2 2 5
+3
+2 5 12
+3 2 4 7
+4 2 3 7 12
+5 1 2 3 4 5
+3
+2 5 12
+3 2 4 7
+4 2 3 7 12
+0</code></pre><h3 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>LWW
+WWL</code></pre><h3 id="code-3"><a href="#code-3" class="headerlink" title="code"></a>code</h3><pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+int n, s[10100], sg[11000];
+int cmp(const void *a, const void *b)
+{
+    return *(int *)a - *(int *)b;
+}
+int dfs(int x)
+{
+    int i, e;
+    int v[110]; //应该定义到里边
+    if (sg[x] != -1)
+        return sg[x];
+    memset(v, 0, sizeof(v));
+    for (i = 0; i &lt; n; i++)
+    {
+        if (x &gt;= s[i])
+        {
+            // 寻找当前可到达状态
+            dfs(x - s[i]);
+            v[sg[x - s[i]]] = 1;
+        }
+    }
+    for (i = 0;; i++)
+    {
+        if (!v[i])
+        {
+            e = i;
+            break;
+        }
+    }
+    return sg[x] = e;
+}
+int main()
+{
+    int i, t;
+    while (scanf(&quot;%d&quot;, &amp;n) != EOF, n)
+    {
+        memset(sg, -1, sizeof(sg));
+        // 可执行操作集
+        for (i = 0; i &lt; n; i++)
+            scanf(&quot;%d&quot;, &amp;s[i]);
+        // 对可执行操作集进行排序
+        qsort(s, n, sizeof(s[0]), cmp);
+        scanf(&quot;%d&quot;, &amp;t);
+        while (t--)
+        {
+            int c, sum = 0;
+            // 几种可能的堆数及其个数
+            scanf(&quot;%d&quot;, &amp;c);
+            while (c--)
+            {
+                int num;
+                scanf(&quot;%d&quot;, &amp;num);
+                sum ^= dfs(num);
+            }
+            if (sum == 0)
+                printf(&quot;L&quot;);
+            else
+                printf(&quot;W&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+}</code></pre>
             </div>
             <hr />
 
@@ -1033,9 +1170,9 @@ Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《git常用命令和错误排除》
+                    《ACM-homework1》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/git-command-notes.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/acm-homework1.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 Peter Pan
             </a> 采用
@@ -1337,65 +1474,36 @@ Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/zai-file-xie-yi-xia-du-qu-ben-di-json-wen-jian.html">
+                <a href="/acm-homework1.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="在file协议下读取本地json文件">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="ACM-homework1">
                         
-                        <span class="card-title">在file协议下读取本地json文件</span>
+                        <span class="card-title">ACM-homework1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在file协议下读取本地json文件，解决ajax跨域问题。
+                            Brave GameProblem Description十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。今天，大家
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-27
+                            </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
-                                </a>
-                            
-                            <a href="/categories/Python/JavaScript/" class="post-category" target="_blank">
-                                    JavaScript
-                                </a>
-                            
-                            <a href="/categories/Python/JavaScript/HTML/" class="post-category" target="_blank">
-                                    HTML
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/JavaScript/" target="_blank">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/HTML/" target="_blank">
-                        <span class="chip bg-color">HTML</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1406,31 +1514,35 @@ Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/6-ajaxnotes.html">
+                <a href="/acm-test-first.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Ajax学习笔记">
+                        <img src="/medias/featureimages/46.jpg" class="responsive-img" alt="ACM-test-first">
                         
-                        <span class="card-title">Ajax学习笔记</span>
+                        <span class="card-title">ACM-test-first</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Ajax学习笔记，学习Ajax是为了实现前端后后端的数据交互。
+                            ACM期末考试（一）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Ajax/" class="post-category" target="_blank">
-                                    Ajax
+                            <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
+                                </a>
+                            
+                            <a href="/categories/Algorithm/ACM/" class="post-category" target="_blank">
+                                    ACM
                                 </a>
                             
                             
@@ -1440,8 +1552,12 @@ Resolving deltas: 100% (192/192), done.</code></pre><p>问题解决！</p>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Ajax/" target="_blank">
-                        <span class="chip bg-color">Ajax</span>
+                    <a href="/tags/Algorithm/" target="_blank">
+                        <span class="chip bg-color">Algorithm</span>
+                    </a>
+                    
+                    <a href="/tags/ACM/" target="_blank">
+                        <span class="chip bg-color">ACM</span>
                     </a>
                     
                 </div>

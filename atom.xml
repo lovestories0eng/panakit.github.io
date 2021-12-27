@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-12-26T13:12:58.221Z</updated>
+  <updated>2021-12-27T15:35:56.750Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM-homework1</title>
+    <link href="https://pshtrophycloud.com/acm-homework1.html"/>
+    <id>https://pshtrophycloud.com/acm-homework1.html</id>
+    <published>2021-12-27T08:39:21.000Z</published>
+    <updated>2021-12-27T15:35:56.750Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Brave-Game&quot;&gt;&lt;a href=&quot;#Brave-Game&quot; class=&quot;headerlink&quot; title=&quot;Brave Game&quot;&gt;&lt;/a&gt;Brave Game&lt;/h2&gt;&lt;h3 id=&quot;Problem-Description&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ACM-test-first</title>
