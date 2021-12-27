@@ -987,6 +987,7 @@ int main()
     int i, t;
     while (scanf(&quot;%d&quot;, &amp;n) != EOF, n)
     {
+        // 赋初值-1表示未被访问过
         memset(sg, -1, sizeof(sg));
         // 可执行操作集
         for (i = 0; i &lt; n; i++)
