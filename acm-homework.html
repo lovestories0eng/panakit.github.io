@@ -617,7 +617,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/34.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/35.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -759,7 +759,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    562
+                    622
                 </div>
                 
 
@@ -1233,6 +1233,191 @@ int main() {
     }
     return 0;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><h3 id="Problem-Description-6"><a href="#Problem-Description-6" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>为了测试小朋友们对记忆化深度优先搜索的掌握情况，老师特意出了一个函数来考考小朋友们。<br>已知w（a,b,c）依次有四种不同的返回值<br>1）当a,b,c 存在一个小于等于0时返回1<br>2）当a,b,c 存在一个大于20时返回w(20,20,20)<br>3）当a&lt;b,且b&lt;c 时返回w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c)<br>4）其余情况返回w(a-1, b, c) + w(a-1, b-1, c) + w(a-1, b, c-1) - w(a-1, b-1, c-1)<br>给出a,b,c,求出w(a,b,c)<br>0&lt;a,b,c&lt;30</p>
+<p>PS:比如 w(30,-1,0)既满足条件1又满足条件2，这种时候我们就按最上面的条件来算，所以答案为1。</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>有多组测试数据<br>一行3个整数a,b,c</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>一行一个整数w</p>
+<h3 id="Sample-Input-7"><a href="#Sample-Input-7" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>3 2 2</code></pre><h3 id="Sample-Output-7"><a href="#Sample-Output-7" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>9</code></pre><h3 id="code-7"><a href="#code-7" class="headerlink" title="code"></a>code</h3><p>观察题目，直接递归绝对会被卡（是多组输入）。最后递归的时候abc都只会小于等于20，所以直接拿个数组记录一下就可以了。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+#include <cstdio>
+#define ll long long
+#define INF 0x3f3f3f3f
+using namespace std;
+
+ll d[21][21][21];
+ll x, y, z;
+
+void init()
+{
+    for (int i = 0; i <= 20; i++)
+        for (int j = 0; j <= 20; j++)
+            for (int k = 0; k <= 20; k++)
+                d[i][j][k] = INF;
+}
+
+ll w(ll a, ll b, ll c)
+{
+    if (a <= 0 || b <= 0 || c <= 0)
+        return 1;
+    if (a > 20 || b > 20 || c > 20)
+        return w(20, 20, 20);
+    // 如果前面已经算出来该数则直接返回
+    if (d[a][b][c] != INF)
+        return d[a][b][c];
+    if (a < b && b < c)
+    {
+        d[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
+        return d[a][b][c];
+    }
+    d[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
+    return d[a][b][c];
+}
+
+int main()
+{
+    init();
+    while (cin >> x >> y >> z)
+    {
+        if (x == -1 && y == -1 && z == -1)
+            break;
+        printf("w(%lld, %lld, %lld) = %lld\n", x, y, z, w(x, y, z));
+        // printf("w(%I64d, %I64d, %I64d) = %I64d\n",x,y,z,w(x,y,z));
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="FatMouse"><a href="#FatMouse" class="headerlink" title="FatMouse"></a>FatMouse</h2><h3 id="Problem-Description-7"><a href="#Problem-Description-7" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>小老鼠准备了M磅的猫粮，准备去和看守仓库的猫做交易，因为仓库里有小老鼠喜欢吃的五香豆。<br>仓库有N个房间；第i个房间有J[i] 磅的五香豆，需要用F[i]磅的猫粮去交换；<br>需要指出的是：<strong>老鼠如果要和某个房间的猫做交易，就必须交换该房间所有的五香豆！</strong><br>现在，请帮忙计算一下，小老鼠通过交易最多能够得到多少磅的五香豆？</p>
+<h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h3><p>输入包含多组测试用例。<br>每组测试数据首先一行是2个非负整数M和N，接着的N行，每行分别包含2个非负整数J[i]和F[i]，数据的具体含义详见题目描述。<br>输入数据以两个-1结束。<br>题目保证所有的数据不超过1000.</p>
+<h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h3><p>请计算并输出小老鼠最多能够得到的五香豆数量，每组数据输出一行。</p>
+<h3 id="Sample-Input-8"><a href="#Sample-Input-8" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>5 3
+7 2
+4 3
+5 2
+20 3
+25 18
+24 15
+15 10
+-1 -1</code></pre><h3 id="Sample-Output-8"><a href="#Sample-Output-8" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>12
+25</code></pre><h3 id="code-8"><a href="#code-8" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int value[1005], cost[1005];
+    // dp[j]背包容量为j的最优值。
+    int dp[1005];
+    int m, n;
+    while (cin >> m >> n)
+    {
+        if (m == -1 && n == -1)
+            return 0;
+        memset(dp, 0, sizeof(dp));
+        memset(value, 0, sizeof(value));
+        memset(cost, 0, sizeof(cost));
+        for (int i = 0; i < n; i++)
+        {
+            cin >> value[i] >> cost[i];
+        }
+        // 遍历cost[i]
+        for (int i = 0; i <= n; i++)
+        {
+            // 倒叙遍历是为了保证物品i只被放入一次！。但如果一旦正序遍历了，那么物品0就会被重复加入多次！
+            // 从后往前循环，每次取得状态不会和之前取得状态重合，这样每种物品就只取一次了。
+            for (int j = m; j >= cost[i]; j--)
+            {
+                dp[j] = max(dp[j], dp[j - cost[i]] + value[i]);
+            }
+        cout << "***************" << endl;
+        for (int j = 0; j <= m; j++)
+        {
+            cout << dp[j] << endl;
+        }
+        cout << "***************" << endl;
+        }
+        if (dp[m] < 0)
+            cout << "-1" << endl;
+        else
+            cout << dp[m] << endl;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="猫和老鼠"><a href="#猫和老鼠" class="headerlink" title="猫和老鼠"></a>猫和老鼠</h3><h3 id="Problem-Description-8"><a href="#Problem-Description-8" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>小老鼠准备了M磅的猫粮，准备去和看守仓库的猫做交易，因为仓库里有小老鼠喜欢吃的五香豆。<br>仓库有N个房间；<br>第i个房间有J[i] 磅的五香豆，需要用F[i]磅的猫粮去交换；<br>需要指出的是：<br><strong>1、老鼠如果要和某个房间的猫做交易，就必须交换该房间所有的五香豆！</strong><br><strong>2、还有个特殊的情况，小老鼠有强迫症——它一定要把自己所有的猫粮都用完才行！</strong><br>现在，请帮忙计算一下，在必须用完所有的猫粮的前提下，小老鼠通过交易最多能够得到多少磅的五香豆？</p>
+<h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h3><p>输入包含多组测试用例。<br>每组测试数据首先一行是2个非负整数M和N，接着的N行，每行分别包含2个非负整数J[i]和F[i]，数据的具体含义详见题目描述。<br>输入数据以两个-1结束。<br>题目保证所有的数据都不超过1000.</p>
+<h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h3><p>请计算并输出小老鼠最多能够得到的五香豆数量，如果不能满足小老鼠的强迫症，请输出-1；<br>每组数据输出一行。</p>
+<h3 id="Sample-Input-9"><a href="#Sample-Input-9" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>5 3
+7 2
+4 3
+5 2
+20 3
+25 18
+24 15
+15 10
+-1 -1</code></pre><h3 id="Sample-Output-9"><a href="#Sample-Output-9" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>11
+-1</code></pre><h3 id="code-9"><a href="#code-9" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int w[1005], v[1005];
+    int f[1005];
+    int m, n;
+    while (cin >> m >> n)
+    {
+        if (m == -1 && n == -1)
+            return 0;
+        // 初始化为负无穷    
+        memset(f, 0xaf, sizeof(f));
+        memset(w, 0, sizeof(w));
+        memset(v, 0, sizeof(v));
+        f[0] = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> w[i] >> v[i];
+        }
+        for (int i = 0; i <= n; i++)
+        {
+            for (int j = m; j >= v[i]; j--)
+            {
+                f[j] = max(f[j], f[j - v[i]] + w[i]);
+            }
+        }
+        if (f[m] < 0)
+            cout << "-1" << endl;
+        else
+            cout << f[m] << endl;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="超级密码"><a href="#超级密码" class="headerlink" title="超级密码"></a>超级密码</h2><h3 id="Problem-Description-9"><a href="#Problem-Description-9" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>DD小朋友今年三年级，最近，声称设计了一套“超级密码”系统！<br>说实话，这套所谓的“超级密码”一点也不难：<br>对于一个给定的字符串，你只要提取其中的数字，然后连在一起构成一个整数，再乘以DD小朋友的幸运数字513，就是解密后的结果了~<br>比如，字符串“ads2d4,122”，提取后的整数是24122，然后乘以513，就能得到解密后的结果：12374586。<br>注：题目保证解密后的结果在32位整数范围。</p>
+<h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input"></a>Input</h3><p>输入首先包括一个正整数N，表示有N组测试用例。<br>每组数据占一行，包含一个长度不超过30的字符串。</p>
+<h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output"></a>Output</h3><p>请根据题目要求输出解密后的结果，每组数据输出一行。</p>
+<h3 id="Sample-Input-10"><a href="#Sample-Input-10" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre class="line-numbers language-plain"><code class="language-plain">2
+ads2d4,122
+0023asdf2AA90<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Sample-Output-10"><a href="#Sample-Output-10" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre class="line-numbers language-plain"><code class="language-plain">12374586
+11947770<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="code-10"><a href="#code-10" class="headerlink" title="code"></a>code</h3><pre class="line-numbers language-c++"><code class="language-c++">#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    int n, len, base, ans;
+    char str[35];
+    scanf("%d", &n);
+    while (n--)
+    {
+        base = 1;
+        ans = 0;
+        scanf("%s", str);
+        len = strlen(str);
+        for (int i = len - 1; i >= 0; i--)
+        {
+            if (str[i] >= '0' && str[i] <= '9')
+            {
+                ans += base * (str[i] - '0');
+                base *= 10;
+            }
+        }
+        ans *= 513;
+        printf("%d\n", ans);
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1704,7 +1889,7 @@ int main() {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="ACM-homework">
+                        <img src="/medias/featureimages/35.jpg" class="responsive-img" alt="ACM-homework">
                         
                         <span class="card-title">ACM-homework</span>
                     </div>
@@ -1739,7 +1924,7 @@ int main() {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/47.jpg" class="responsive-img" alt="ACM-test-first">
+                        <img src="/medias/featureimages/48.jpg" class="responsive-img" alt="ACM-test-first">
                         
                         <span class="card-title">ACM-test-first</span>
                     </div>
@@ -1954,7 +2139,7 @@ int main() {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">30.9k
+            <span class="white-color">31k
              丨            
           
 
@@ -2044,7 +2229,7 @@ int main() {
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">30.9k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">31k</span>
     </div>
 </footer>
 
