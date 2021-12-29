@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2021-12-29T07:54:10.074Z</updated>
+  <updated>2021-12-29T13:16:18.797Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ACM-test-second</title>
+    <link href="https://pshtrophycloud.com/acm-test-second.html"/>
+    <id>https://pshtrophycloud.com/acm-test-second.html</id>
+    <published>2021-12-29T13:07:43.000Z</published>
+    <updated>2021-12-29T13:16:18.797Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Problem-A&quot;&gt;&lt;a href=&quot;#Problem-A&quot; class=&quot;headerlink&quot; title=&quot;Problem A&quot;&gt;&lt;/a&gt;Problem A&lt;/h2&gt;&lt;h3 id=&quot;Problem-Description&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="https://pshtrophycloud.com/categories/Algorithm/"/>
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/categories/Algorithm/ACM/"/>
+    
+    
+      <category term="Algorithm" scheme="https://pshtrophycloud.com/tags/Algorithm/"/>
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/tags/ACM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ACM-homework</title>
     <link href="https://pshtrophycloud.com/acm-homework.html"/>
     <id>https://pshtrophycloud.com/acm-homework.html</id>
     <published>2021-12-27T08:39:21.000Z</published>
-    <updated>2021-12-29T07:54:10.074Z</updated>
+    <updated>2021-12-29T10:29:52.963Z</updated>
     
     <summary type="html">
     
