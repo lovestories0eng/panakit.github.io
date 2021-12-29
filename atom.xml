@@ -51,7 +51,7 @@
     <link href="https://pshtrophycloud.com/acm-homework.html"/>
     <id>https://pshtrophycloud.com/acm-homework.html</id>
     <published>2021-12-27T08:39:21.000Z</published>
-    <updated>2021-12-29T10:29:52.963Z</updated>
+    <updated>2021-12-29T13:18:19.346Z</updated>
     
     <summary type="html">
     
@@ -65,6 +65,14 @@
     
     </summary>
     
+      <category term="Algorithm" scheme="https://pshtrophycloud.com/categories/Algorithm/"/>
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/categories/Algorithm/ACM/"/>
+    
+    
+      <category term="Algorithm" scheme="https://pshtrophycloud.com/tags/Algorithm/"/>
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/tags/ACM/"/>
     
   </entry>
   
