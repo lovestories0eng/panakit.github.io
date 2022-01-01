@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2022-01-01T08:55:23.707Z</updated>
+  <updated>2022-01-01T14:08:04.935Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM-test-third</title>
+    <link href="https://pshtrophycloud.com/acm-test-third.html"/>
+    <id>https://pshtrophycloud.com/acm-test-third.html</id>
+    <published>2022-01-01T13:57:14.000Z</published>
+    <updated>2022-01-01T14:08:04.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Problem-A&quot;&gt;&lt;a href=&quot;#Problem-A&quot; class=&quot;headerlink&quot; title=&quot;Problem A&quot;&gt;&lt;/a&gt;Problem A&lt;/h2&gt;&lt;h3 id=&quot;Problem-Description&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/categories/ACM/"/>
+    
+      <category term="algorithm" scheme="https://pshtrophycloud.com/categories/ACM/algorithm/"/>
+    
+    
+      <category term="ACM" scheme="https://pshtrophycloud.com/tags/ACM/"/>
+    
+      <category term="algorithm" scheme="https://pshtrophycloud.com/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>Java-知识点巩固</title>
