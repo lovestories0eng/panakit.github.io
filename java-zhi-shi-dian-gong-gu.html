@@ -620,7 +620,7 @@ JDK : Java Development Kit Java开发工具">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/41.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/40.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -775,14 +775,14 @@ JDK : Java Development Kit Java开发工具">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    26 分
                 </div>
                 
                 
@@ -1428,7 +1428,586 @@ s点的坐标:6,8</code></pre><p>对象作为方法的返回值</p>
 <p><img src="/java-zhi-shi-dian-gong-gu/121.png" alt></p>
 <p><img src="/java-zhi-shi-dian-gong-gu/122.png" alt></p>
 <p><img src="/java-zhi-shi-dian-gong-gu/123.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/124.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/125.png" alt></p>
+<pre><code>class Father {
+    public void set() {}
+    static void get() {}
+}</code></pre><pre><code>class Son extends Father {
+    public void set() {}
+    static void get() {}
+}
+// RIGHT!</code></pre><pre><code>class Son extends Father {
+    public void get() {}
+    static void set() {}
+}
+// WRONG</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/126.png" alt></p>
+<p><strong>子类重写了print()方法，那么父类类型的引用child在调用该方法时将会调用子类中重写的print()。</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/127.png" alt></p>
+<p><strong>子类重写了print()方法，那么父类类型的引用child在调用该方法时将会调用子类中重写的print()。同上</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/128.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/129.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/130.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/131.png" alt></p>
+<p><strong>变量只会被隐藏，但是不会被覆盖。</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/132.png" alt></p>
+<p><strong>Polymorphism</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/133.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/134.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/135.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/136.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/137.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/138.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/139.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/140.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/141.png" alt></p>
+<p><strong>Abstract class</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/142.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/143.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/144.png" alt></p>
+<p><strong>Interface</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/145.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/146.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/147.png" alt></p>
+<p><strong>Interface inheritance</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/148.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/149.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/150.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/151.png" alt></p>
+<p><strong>Abstract class VS. Interface</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/152.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/153.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/154.png" alt></p>
+<p><strong>Encapsulation</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/155.png" alt></p>
+<pre><code>public class Person{  
+    public String name ;  
+    public String sex ;  
+    public int age ;  
+} </code></pre><pre><code>Person p = new Person();  
+p.age= 30;  
+p.name= &quot;张三&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>int age = 25;
+Person p = new Person();  
+p.age= age;  
+p.name= “李四&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>public class Person{  
+    public String name ;  
+    public String sex ;  
+    public String age ;  
+} </code></pre><pre><code>Person p = new Person();  
+p.age= String.valueOf(30);  
+p.name= &quot;张三&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>int age = 25;
+Person p = new Person();  
+p.age= String.valueOf(age);  
+p.name= “李四&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>public class Person{  
+    public String name ;  
+    public String sex ;  
+    private int age ;     
+    public void setAge(int age){
+        this.age = age;
+    }
+} </code></pre><pre><code>Person p = new Person();  
+p.setAge(20);  
+p.name= &quot;张三&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>int age = 25;
+Person p = new Person();  
+p.setAge(age);  
+p.name= “李四&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>public class Person{  
+    public String name ;  
+    public String sex ;  
+    private String age ;     
+    public void setAge(int age){
+        this.age = String.valueOf(age);
+    }
+} </code></pre><pre><code>Person p = new Person();  
+p.setAge(20);  
+p.name= &quot;张三&quot;;  
+p.sex= &quot;男&quot;; </code></pre><pre><code>int age = 25;
+Person p = new Person();  
+p.setAge(age);  
+p.name= “李四&quot;;  
+p.sex= &quot;男&quot;; </code></pre><p><img src="/java-zhi-shi-dian-gong-gu/156.png" alt></p>
+<p><strong>写一个多边形面积计算器，支持circle、triangle等</strong></p>
+<p>定义CircleCalculate类用于计算圆面积</p>
+<p>​    —-extends AreaCalculate</p>
+<p>​    —-implements Calculate</p>
+<p>定义TriangleCalculate类用于计算圆面积</p>
+<p>​      —-extends AreaCalculate</p>
+<p>​      —-implements Calculate</p>
+<p><img src="/java-zhi-shi-dian-gong-gu/157.png" alt></p>
+<h2 id="Section-seven"><a href="#Section-seven" class="headerlink" title="Section seven"></a>Section seven</h2><p>String—int的转换</p>
+<pre><code>public static int parseInt(String s) throws NumberFormatException
+public static int parseInt(String s, int radix) throws NumberFormatException</code></pre><pre><code>String s = “10”;
+int i = Integer.parseInt(s);</code></pre><pre><code>String s = “10”;
+int i = Integer.parseInt(s, 2);</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/158.png" alt></p>
+<p>int—String的转换</p>
+<p><img src="/java-zhi-shi-dian-gong-gu/159.png" alt></p>
+<pre><code>byte     largestByte        = Byte.MAX_VALUE;  
+                                              //127 (27-1)
+short     largestShort         = Short.MAX_VALUE;  
+                                              //32767 (215-1)
+int      largestInteger          = Integer.MAX_VALUE;
+                    //2147483647 (231-1)
+long     largestLong           = Long.MAX_VALUE;
+                    //9223372036854775807
+float     largestFloat           = Float.MAX_VALUE;
+                    //3.40282e+38
+double largestDouble        = Double.MAX_VALUE;
+                    //1.79769e+308</code></pre><p><strong>java.lang.String类</strong></p>
+<pre><code>String s = new String();
 
+char c[] = {‘a’, ‘b’, ‘c’};
+String s = new String(c);
+
+char c[] = {‘语’, ‘言’};
+String s = new String(c);</code></pre><pre><code>byte b[] = {97, 98, 99};
+String s = new String(b); // abc
+
+String s = “abc”;
+String s = “语言”;
+
+String s = “”;</code></pre><pre><code>String s1 = &quot;java语言&quot;;
+String s2 = &quot;JavA语言&quot;;
+System.out.println(s1.equals(s2));
+System.out.println(s1.equalsIgnoreCase(s2));
+System.out.println(s1.compareTo(s2));
+System.out.println(s1.compareToIgnoreCase(s2));</code></pre><pre><code>运行结果：
+false  true  32  0</code></pre><pre><code>String s1 = &quot;java语言&quot;;
+String s2 = &quot;java语言&quot;;
+System.out.println(s1==s2);
+System.out.println(s1.equals (s2));</code></pre><pre><code>运行结果：
+true true</code></pre><pre><code>String s1 = new String(“java语言”);
+String s2 = new String(“java语言”);
+System.out.println(s1==s2);
+System.out.println(s1.equals (s2));</code></pre><pre><code>运行结果：
+false  true</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/160.png" alt></p>
+<p>==比较值 equals比较内存地址</p>
+<pre><code>String s1 = &quot;java语言&quot;;
+String s2 = &quot;JavA语言&quot;;
+System.out.println(s1.length());
+System.out.println(s2.length());
+System.out.println(s1.substring(0, 4));
+// 取出索引为4到最后的字符串
+System.out.println(s1.substring(4));
+System.out.println(s1.charAt(0));</code></pre><pre><code>运行结果：
+6
+6
+java
+语言
+j</code></pre><p>字符串分割:  按指定的正则表达式将字符串分割成一个字符串数组</p>
+<pre><code>String s = “boo:and:foo”;
+String[] Result = s.split(“:”);
+Regex    Result
+ “:”     { “boo”, “and”, “foo” }</code></pre><p><strong>字符串操作类—java.lang.StringBuffer类</strong></p>
+<pre><code>String s = &quot;java语言&quot;;
+StringBuffer buffer = new StringBuffer(s);
+buffer.append(&quot; easy&quot;);
+buffer.insert(6, &quot; is&quot;);
+s = buffer.toString();
+System.out.println(s);</code></pre><pre><code>运行结果：
+java语言 is easy.</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/161.png" alt></p>
+<pre><code>String s = “java” + “语言”;
+String s = “java”.concat(“语言”);
+StringBuffer buffer = new StringBuffer(“java”); 
+buffer.append(“语言”);                                
+String s = buffer.toString();</code></pre><pre><code>String str1 = &quot;&quot;;
+for (int i = 1; i &lt;= N; i++) 
+      str1 = str1 + &quot;*&quot;;
+// 383663 ms
+
+StringBuffer sb = new StringBuffer();
+for (int i = 1; i &lt;= N; i++) 
+      sb.append(&quot;*&quot;);
+String str2 = sb.toString();
+// 19 ms
+
+String str3 = &quot;&quot;;
+for (int i = 1; i &lt;= N; i++) 
+      str3.concat(&quot;*&quot;);
+// 29 ms</code></pre><pre><code>int a = 1, b = 2; String c = “ men”;
+
+String s = a + b + c;
+// 3men
+
+String s = c + b + a;
+// men21</code></pre><p><strong>字符串操作类— java.util.StringTokenizer类</strong></p>
+<p>字符串分割: 与String.split具有类似功能，但是做了封装</p>
+<pre><code>String s = &quot;this is a test&quot;;
+StringTokenizer st = new StringTokenizer(s);
+while (st.hasMoreTokens()) {
+    System.out.println(st.nextToken());
+}</code></pre><pre><code>运行结果:
+this
+is 
+a
+test</code></pre><pre><code>String s = &quot;this:is:a:test”;
+StringTokenizer st = new StringTokenizer(s, “:”);
+while (st.hasMoreTokens()) {
+    System.out.println(st.nextToken());
+}</code></pre><pre><code>运行结果:
+this
+is 
+a
+test</code></pre><pre><code>// 假设有100000个tokens
+StringTokenizer st = new StringTokenizer(s1);
+// 5ms
+String[] st = s1.split(&quot; &quot;);
+// 41ms</code></pre><p><strong>Arrays class</strong></p>
+<pre><code>import java.util.Arrays;
+public class ArrayDemo1 {
+    public static void main(String args[]) {
+        int[] a1 = new int[5];
+        int[] a2 = new int[5];
+        Arrays.fill(a1, 47);
+        Arrays.fill(a2, 47);
+        // Arrays.equals：比较两个给定的数组是否相等
+        System.out.println(Arrays.equals(a1, a2));
+        a2[3]=11;  a2[2]=9;
+        System.out.println(Arrays.equals(a1, a2));
+        Arrays.sort(a2);
+        System.out.println(Arrays.binarySearch(a2, 11));
+    }
+}</code></pre><pre><code>True
+False
+9,11,47,47,47
+1</code></pre><p><strong>Set interface</strong></p>
+<p>Set是一系列不重复元素的集合</p>
+<p><img src="/java-zhi-shi-dian-gong-gu/162.png" alt></p>
+<pre><code>// 用于找出文本中出现过的词
+import java.util.*;
+public class SetDemo1 {
+    public static void main(String args[]) {
+        HashSet s = new HashSet();
+        for (int i=0; i&lt;args.length; i++){
+            s.add(args[i]);
+        }
+        System.out.println(s.size()+&quot; distinct words: &quot;+s);
+    }
+}</code></pre><pre><code>D:\java SetDemo1 i came i saw i left
+4 distinct words: [left, came, saw, i]</code></pre><pre><code>// 用HashSet找出文本中的唯一词/重复词
+// 一个Set放唯一词，当无法插入该Set时意味着是重复词，则放入另一个Set
+import java.util.*;
+public class SetDemo2 {
+    public static void main(String args[]) {
+        HashSet uniques = new HashSet();    //存放唯一词
+        HashSet dups = new HashSet();        //存放重复词
+        for (int i=0; i&lt;args.length; i++){
+            if (!uniques.add(args[i]))
+                dups.add(args[i]);
+        }
+        uniques.removeAll(dups);      
+        System.out.println(&quot;Unique words: &quot; + uniques);
+        System.out.println(&quot;Duplicate words: &quot; + dups);
+    }
+}</code></pre><pre><code>D:\java SetDemo2 i came i saw i left
+Unique words: [came, left, saw]
+Duplicate words: [i]</code></pre><pre><code>import java.util.*;
+public class SetDemo4 {
+      public static void main(String args[]) {
+          boolean b;
+          Set s = new HashSet();
+          b = s.add(&quot;string1&quot;);
+          System.out.println(&quot;string1 add returns &quot; + b);
+          b = s.add(&quot;string2&quot;);
+          System.out.println(&quot;string2 add returns &quot; + b);
+          b = s.add(&quot;string3&quot;);
+          System.out.println(&quot;string3 add returns &quot; + b);
+          b = s.add(&quot;string1&quot;);
+          System.out.println(&quot;string1 add returns &quot; + b);
+          b = s.add(&quot;string2&quot;);
+          System.out.println(&quot;string2 add returns &quot; + b);
+          Iterator i = s.iterator();
+          while (i.hasNext()) 
+               System.out.println(i.next());
+      }
+}
+</code></pre><pre><code>D:\java SetDemo3
+string1 add returns true
+string2 add returns true
+string3 add returns true
+string1 add returns false
+string2 add returns false
+string3
+string1
+string2
+
+D:\
+</code></pre><p>无序输出</p>
+<p>java.util.Iterator</p>
+<p>迭代器(interface)</p>
+<p>轮循</p>
+<pre><code>import java.util.*;
+public class SetDemo3 {
+      public static void main(String args[]) {
+          boolean b;
+          Set s = new TreeSet();
+          b = s.add(&quot;string1&quot;);
+          System.out.println(&quot;string1 add returns &quot; + b);
+          b = s.add(&quot;string2&quot;);
+          System.out.println(&quot;string2 add returns &quot; + b);
+          b = s.add(&quot;string3&quot;);
+          System.out.println(&quot;string3 add returns &quot; + b);
+          b = s.add(&quot;string1&quot;);
+          System.out.println(&quot;string1 add returns &quot; + b);
+          b = s.add(&quot;string2&quot;);
+          System.out.println(&quot;string2 add returns &quot; + b);
+          Iterator i = s.iterator();
+          while (i.hasNext()) 
+               System.out.println(i.next());
+      }
+}</code></pre><pre><code>D:\java SetDemo3
+string1 add returns true
+string2 add returns true
+string3 add returns true
+string1 add returns false
+string2 add returns false
+string1
+string2
+string3
+
+D:\</code></pre><p>有序输出(字典序)</p>
+<p><strong>HashSet VS. TreeSet</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/162.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/163.png" alt></p>
+<p><strong>List interface</strong></p>
+<pre><code>import java.util.*;
+public class ListDemo1 {
+    public static void main(String args[]) {
+        List list = new ArrayList();
+        for (int i = 1; i &lt;= 10; i++)
+            list.add(i + &quot; * &quot; + i + &quot; = &quot; + i * i);
+        Iterator iter = list.iterator();
+        while (iter.hasNext())
+            System.out.println(iter.next());
+    }
+}</code></pre><pre><code>D:\java ListDemo1
+1 * 1 = 1
+2 * 2 = 4
+3 * 3 = 9
+4 * 4 = 16
+5 * 5 = 25
+6 * 6 = 36
+7 * 7 = 49
+8 * 8 = 64
+9 * 9 = 81
+10 * 10 = 100</code></pre><p><strong>Map interface</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/164.png" alt></p>
+<pre><code>import java.util.*;
+public class MapDemo1 {
+     private static final Integer ONE = new Integer(1);
+     public static void main(String args[]) {
+          HashMap m = new HashMap();
+          for (int i=0; i&lt;args.length; i++) {
+                Integer freq = (Integer) m.get(args[i]);
+                m.put(args[i], (freq==null ? ONE:new Integer(freq.intValue() + 1)));
+          }
+          System.out.println(m.size()+&quot; distinct words detected:&quot;);
+          System.out.println(m);
+    }
+}</code></pre><pre><code>D:\java MapDemo1 if it is to be it is up to me to delegate 
+ 8 distinct words detected: 
+{to=3, me=1, delegate=1, it=2, is=2, if=1, be=1, up=1}</code></pre><p>用HashMap统计文档中单词的出现频率</p>
+<p>&lt;key, value&gt;, key是单词，value是频率</p>
+<p><img src="/java-zhi-shi-dian-gong-gu/165.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/166.png" alt></p>
+<p><strong>Collections class</strong></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/167.png" alt></p>
+<pre><code>import java.util.*;
+public class SortDemo {
+    public static void main(String args[]) {
+       List list = new ArrayList();
+        list.add(“abc”);
+        list.add(“DEF”);
+        list.add(“ghi”);
+        Collections.sort(list);
+        Iterator iter = list.iterator();
+        while(iter.hasNext())
+        System.out.println(iter.next());
+        // 使用自定义的比较函数进行排序
+        Collections.sort(list, new MySort());
+        iter = list.iterator();
+        while(iter.hasNext())
+        System.out.println(iter.next());
+    }
+}</code></pre><pre><code>import java.util.*;
+class MySort implements Comparator{
+    public int compare(Object o1, Object o2) 
+   {
+       String s1 = (String)o1;
+       String s2 = (String)o2;
+         return s1.compareToIgnoreCase(s2);
+    }
+}</code></pre><p>可以让Collections按照自定义比较函数进行排序</p>
+<h2 id="Section-eight"><a href="#Section-eight" class="headerlink" title="Section eight"></a>Section eight</h2><p><strong>Exception</strong></p>
+<pre><code>readFile {
+    System.out.println(“Read!”);
+    try {
+        open the file;
+        determine its size;
+        allocate that much memory;
+        read the file into memory;
+        close the file;
+    } catch (Exception) {
+        doSomething;
+    }
+}</code></pre><pre><code>readFile {
+    System.out.println(“Read!”);
+    open the file;
+    determine its size;
+    allocate that much memory;
+    read the file into memory;
+    close the file;
+}</code></pre><pre><code>readFile {
+    System.out.println(“Read!”);
+    try {
+        open the file;
+        determine its size;
+        allocate that much memory;
+        read the file into memory;
+        close the file;
+    } catch (fileOpenFailed) {
+        doSomething;
+    } catch (sizeDeterminationFailed) {
+        doSomething;
+    } catch (memoryAllocationFailed) {
+        doSomething;
+    } catch (readFailed) {
+        doSomething;
+    } catch (fileCloseFailed) {
+        doSomething;
+    }
+}</code></pre><p><strong>在被调用的函数抛出异常，在调用它的函数处理异常</strong></p>
+<pre><code>method1 {
+    call method2;
+}
+method2 {
+    call method3;
+}
+method3 {
+    call readFile;
+}</code></pre><pre><code>method1 {
+    try {
+        call method2;
+    } catch (exception) {
+        doErrorProcessing;
+    }
+}
+method2 throws exception {
+    call method3;
+}
+method3 throws exception {
+    call readFile;
+}</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/168.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/169.png" alt></p>
+<p>何时会产生异常？</p>
+<p>由于非预期的结果导致系统运行时产生异常</p>
+<pre><code>class Test {
+    public static void main(String args[]) {
+        int a = 0;
+        int b = 24/a;
+    }
+}</code></pre><pre><code>java Test
+Exception in thread &quot;main“
+java.lang.ArithmeticException: / by zero</code></pre><pre><code>class Test {
+    public static void main(String args[]) {
+        int i = Integer.parseInt(args[0]);
+        System.out.println(i);
+    }
+}</code></pre><pre><code>java Test
+Exception in thread &quot;main“
+java.lang.NumberFormatException: For input string: “a”</code></pre><pre><code>class Test {
+    public static void main(String args[]) {
+        int i = Integer.parseInt(args[5]);
+        System.out.println(i);
+    }
+}</code></pre><pre><code>java Test
+Exception in thread &quot;main“
+java.lang.ArrayIndexOutOfBoundsException: 5</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/170.png" alt></p>
+<p>throws： 用于方法声明处，指出该方法可能发生的异常</p>
+<pre><code>public void function() throws NumberFormatException{
+    //方法体
+}</code></pre><p>throw： 用于语句执行处，确定的抛出一个异常</p>
+<pre><code>if(s.equals(&quot;abc&quot;)) {  
+    throw new NumberFormatException();  
+}</code></pre><p>异常处理器</p>
+<pre><code>import java.io.IOException;
+class Test {
+    public static void main(String args[]) {
+    try {
+        char c = (char)System.in.read();
+        System.out.println(c);
+    } catch (IOException e) {
+        System.out.println(e);
+    }
+  }
+} </code></pre><p>try–catch程序块</p>
+<pre><code>try {
+  // Code that might generate exceptions
+} catch(Type1 id1) {
+  // Handle exceptions of Type1
+} catch(Type2 id2) {
+  // Handle exceptions of Type2
+} catch(Type3 id3) {
+  // Handle exceptions of Type3
+}
+// etc ...</code></pre><pre><code>try {
+    . . . 
+} catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println(e);
+} catch (IOException e) {
+        System.out.println(e);
+}</code></pre><p>try—catch—finally程序块</p>
+<pre><code>try {
+    Java 语句块;     //指一个或多个抛出异常的Java语句
+}
+catch (Exception e) {
+    java语句块;    //异常处理语句
+}
+finally {
+    java语句块;    //善后工作
+}</code></pre><pre><code>try {
+  // The guarded region: Dangerous activities
+  // that might throw A, B, or C 
+} catch(A a1) {
+  // Handler for situation A
+} catch(B b1) {
+  // Handler for situation B
+} catch(C c1) {
+  // Handler for situation C
+} finally {
+  // Activities that happen every time
+}</code></pre><p><img src="/java-zhi-shi-dian-gong-gu/171.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/172.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/173.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/174.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/175.png" alt></p>
+<p><img src="/java-zhi-shi-dian-gong-gu/176.png" alt></p>
+<pre><code>// 自定义异常
+class SimpleException extends Exception {}
+
+public class SimpleExceptionDemo {
+    public void f() throws SimpleException {
+        System.out.println(&quot;Throw SimpleException from f()&quot;);
+        throw new SimpleException();
+    }
+    public static void main(String[] args) {
+        SimpleExceptionDemo sed = new SimpleExceptionDemo();
+        try {
+            sed.f();
+        } catch(SimpleException e) {
+            System.out.println(e);
+            System.out.println(&quot;Caught it!&quot;);
+        }
+     }
+} 
+</code></pre><pre><code>运行结果:
+Throw SimpleException from f()
+SimpleException
+Caught it!</code></pre>
             </div>
             <hr />
 
@@ -1899,7 +2478,7 @@ s点的坐标:6,8</code></pre><p>对象作为方法的返回值</p>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/41.jpg" class="responsive-img" alt="Java-知识点巩固">
+                        <img src="/medias/featureimages/40.jpg" class="responsive-img" alt="Java-知识点巩固">
                         
                         <span class="card-title">Java-知识点巩固</span>
                     </div>
@@ -1949,7 +2528,7 @@ s点的坐标:6,8</code></pre><p>对象作为方法的返回值</p>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="ACM-test-second">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="ACM-test-second">
                         
                         <span class="card-title">ACM-test-second</span>
                     </div>
@@ -2164,7 +2743,7 @@ s点的坐标:6,8</code></pre><p>对象作为方法的返回值</p>
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">33.7k
+            <span class="white-color">36.2k
              丨            
           
 
@@ -2254,7 +2833,7 @@ s点的坐标:6,8</code></pre><p>对象作为方法的返回值</p>
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">33.7k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">36.2k</span>
     </div>
 </footer>
 
