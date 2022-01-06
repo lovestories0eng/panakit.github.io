@@ -1754,6 +1754,23 @@ REVOKE SELECT ON student FROM 李四@localhost;
 REVOKE SELECT ON course FROM 李四@localhost;
 -- 14.6
 REVOKE INSERT, DELETE ON student FROM 张勇@localhost;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="关系代数作业"><a href="#关系代数作业" class="headerlink" title="关系代数作业"></a>关系代数作业</h2><p><img src="/mysql-chang-yong-yu-fa-fu-xi/%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0.jpg" alt></p>
+<h2 id="ER模型"><a href="#ER模型" class="headerlink" title="ER模型"></a>ER模型</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER1%E9%A2%98%E7%9B%AE.png" alt></p>
+<p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER1.png" alt></p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER2%E9%A2%98%E7%9B%AE.png" alt></p>
+<p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER2.png" alt></p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER3%E9%A2%98%E7%9B%AE1.png" alt></p>
+<p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER3%E9%A2%98%E7%9B%AE2.png" alt></p>
+<p><img src="/mysql-chang-yong-yu-fa-fu-xi/ER3.png" alt></p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>在某高校图书借阅业务中,涉及如下实体集：</p>
+<p><strong>读者、图书、书的类型</strong></p>
+<p>读者凭借书证进行图书借阅，要求能查询正被读者借阅的图书以及已经归还的图书，图书一旦丢失还需要照价赔偿。</p>
+<p><img src="/mysql-chang-yong-yu-fa-fu-xi/%E4%BE%8B%E9%A2%98.png" alt></p>
+<p>转换为关系模式：</p>
+<p>读者（<strong>借书证号</strong>，姓名，性别，工作单位）</p>
+<p>图书（<strong>书号</strong>，类型编号，书名，出版社，出版日期，定价，作者）</p>
+<p>类型（<strong>编号</strong>，名称）</p>
+<p>借阅（<strong>借书证号，书号</strong>，借书时间，还书时间）【或者：借阅（<strong>流水号</strong>，借书证号，书号，借书时间，还书时间）】</p>
 
             </div>
             <hr />
