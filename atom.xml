@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pshtrophycloud.com/"/>
-  <updated>2022-01-01T14:08:04.935Z</updated>
+  <updated>2022-01-06T12:15:34.114Z</updated>
   <id>https://pshtrophycloud.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL常用语法复习</title>
+    <link href="https://pshtrophycloud.com/mysql-chang-yong-yu-fa-fu-xi.html"/>
+    <id>https://pshtrophycloud.com/mysql-chang-yong-yu-fa-fu-xi.html</id>
+    <published>2022-01-06T07:05:06.000Z</published>
+    <updated>2022-01-06T12:15:34.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;成绩管理表&quot;&gt;&lt;a href=&quot;#成绩管理表&quot; class=&quot;headerlink&quot; title=&quot;成绩管理表&quot;&gt;&lt;/a&gt;成绩管理表&lt;/h2&gt;&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://pshtrophycloud.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://pshtrophycloud.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>ACM-test-third</title>
