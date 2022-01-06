@@ -1736,7 +1736,11 @@ UPDATE class
 SET monitor='2000104'
 WHERE clno = '00312';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p><img src="/mysql-chang-yong-yu-fa-fu-xi/%E6%9D%83%E9%99%90.png" alt></p>
-<pre class="line-numbers language-mysql"><code class="language-mysql">-- 14.1
+<pre class="line-numbers language-mysql"><code class="language-mysql">CREATE USER 张三@localhost IDENTIFIED BY 'zhangsan';
+CREATE USER 李四@localhost IDENTIFIED BY 'lisi';
+CREATE USER 张勇@localhost IDENTIFIED BY 'zhangyong';
+CREATE USER 李勇敏@localhost IDENTIFIED BY 'liyongming';
+-- 14.1
 GRANT SELECT ON student TO 李四@localhost;
 -- 14.1
 GRANT SELECT ON course TO 李四@localhost;
@@ -1750,7 +1754,7 @@ GRANT ALL PRIVILEGES ON student TO 李勇敏@localhost WITH GRANT OPTION;
 REVOKE SELECT ON student FROM 李四@localhost;
 REVOKE SELECT ON course FROM 李四@localhost;
 -- 14.6
-REVOKE INSERT, DELETE ON student FROM 张勇@localhost;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+REVOKE INSERT, DELETE ON student FROM 张勇@localhost;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
