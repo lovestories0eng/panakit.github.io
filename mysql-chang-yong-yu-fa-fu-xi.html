@@ -1630,7 +1630,7 @@ CREATE TABLE student
     sname VARCHAR(20) NOT NULL,
     ssex  CHAR(2)     NOT NULL DEFAULT '男' CHECK (ssex IN ('男', '女')),
     sage  SMALLINT CHECK (sage > 14 AND sage < 65),
-    clno  CHAR(5)     NOT NULL REFERENCES class (clno) ON UPDATE CASCADE
+    clno  CHAR(5)     NOT NULL REFERENCES class (clno) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE grade
@@ -1647,7 +1647,6 @@ alter table Student
 add constraint PX_Sno primary key (Sno);
 
 /*性别：男或女，默认为男*/
-alter table Student
 alter table Student
     change column Ssex
         Ssex CHAR(2) default '男';
@@ -1699,7 +1698,7 @@ add constraint PK_Grade primary key (Sno,Cno);
 
 /*Cmark:大于0，小于100*/
 alter table Grade
-add constraint G_mark check(Gmark>0 and Gmark<100);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+add constraint G_mark check(Gmark>0 and Gmark<100);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2><p>默认情况下，不可能等到用户把这些语句全部输入完之后，再执行整段语句。<br>因为mysql一遇到分号，它就要自动执行。<br>即，在语句RETURN ‘’;时，mysql解释器就要执行了。<br>这种情况下，就需要事先把delimiter换成其它符号，如”//“或”$$”</p>
 <p>对于成绩管理数据库，为成绩管理数据库种的Student表创建一触发器：当向表中插入或删除记录时，修改class表中相应的班级人数。</p>
 <pre class="line-numbers language-mysql"><code class="language-mysql">DROP TRIGGER IF EXISTS tri_one;
